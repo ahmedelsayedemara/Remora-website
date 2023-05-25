@@ -1,0 +1,140 @@
+::v-deep {
+  .b-overlay {
+    .spinner-border {
+      display: none;
+    }
+  }
+}
+
+.not-allowed {
+  cursor: not-allowed !important;
+}
+
+.base-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: 0.2s ease-in-out;
+  min-width: 6.25rem;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &.font-14 {
+    font-size: 0.875rem;
+  }
+
+  .spinner-border {
+    color: white !important;
+  }
+}
+
+.btn-primary {
+  background-color: $color-primary;
+  border-color: $color-primary;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.9;
+    background-color: $color-primary !important;
+    border-color: $color-primary !important;
+    box-shadow: none !important;
+  }
+}
+
+.btn-opacity {
+  background-color: #f9f3ff;
+  border-color: #f9f3ff;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-primary !important;
+    border-color: $color-primary !important;
+    box-shadow: none !important;
+    color: white;
+  }
+}
+
+.btn-light-primary {
+  background-color: #f7efff;
+  border-color: #f7efff;
+  color: $color-primary;
+
+  &:hover,
+  &:active {
+    opacity: 0.9;
+    background-color: $color-primary !important;
+    border-color: $color-primary !important;
+    box-shadow: none !important;
+    color: white;
+  }
+}
+
+.btn-light-dark {
+  background-color: #f4f4f4;
+  border-color: #f4f4f4;
+  color: $color-primary;
+
+  &:hover,
+  &:active {
+    opacity: 0.9;
+    background-color: $color-primary !important;
+    border-color: $color-primary !important;
+    box-shadow: none !important;
+    color: white;
+  }
+}
+
+.btn-light-danger {
+  background-color: #f4f4f4;
+  border-color: #f4f4f4;
+  // color: $color-danger;
+
+  &:hover,
+  &:active {
+    opacity: 0.9;
+    // background-color: $color-danger !important;
+    // border-color: $color-danger !important;
+    box-shadow: none !important;
+    color: white;
+  }
+}
+
+.btn-danger {
+  // background-color: $color-danger;
+  // border-color: $color-danger;
+  color: white;
+
+  &:hover,
+  &:active {
+    opacity: 0.9;
+    // background-color: $color-danger !important;
+    // border-color: $color-danger !important;
+    box-shadow: none !important;
+    color: white;
+  }
+}
+
+.btn-outline {
+  background: white;
+  color: $color-primary;
+  font-weight: 400;
+  font-size: 0.875rem;
+  border: 1px solid $color-primary;
+
+  &:hover {
+    background: $color-primary;
+    color: white;
+  }
+}
+
+.base-btn {
+  &.disabled {
+    background-color: #f9f9f9 !important;
+    border-color: #ececec !important;
+    // color: $color-light-gray;
+    cursor: not-allowed;
+  }
+}

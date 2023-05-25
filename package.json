@@ -1,0 +1,52 @@
+{
+  "name": "maktaby",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@vee-validate/i18n": "^4.5.11",
+    "@vee-validate/rules": "^4.0.4",
+    "axios": "^0.21.1",
+    "bootstrap-vue": "^2.21.2",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.10.7",
+    "dotenv": "^16.0.1",
+    "eslint-visitor-keys": "^3.4.0",
+    "lodash.debounce": "^4.0.8",
+    "qs": "^6.9.4",
+    "vee-validate": "^3.4.11",
+    "vue": "^2.7.14",
+    "vue-cookies": "^1.8.1",
+    "vue-file-agent": "^1.7.3",
+    "vue-flatpickr-component": "^8.1.8",
+    "vue-i18n": "^8.18.2",
+    "vue-infinite-loading": "^2.4.5",
+    "vue-router": "^3.2.0",
+    "vue-select": "^3.10.3",
+    "vue-tel-input": "^4.4.0",
+    "vue-verification-code-input": "^1.0.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.9",
+    "@vue/cli-plugin-eslint": "~4.5.9",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-airbnb": "^5.3.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "prettier": "^2.2.1",
+    "sass": "^1.59.3",
+    "sass-loader": "^8.0.2",
+    "vue-eslint-parser": "^9.1.1",
+    "vue-template-compiler": "^2.6.11"
+  }
+}

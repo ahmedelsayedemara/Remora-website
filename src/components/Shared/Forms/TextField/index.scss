@@ -1,0 +1,26 @@
+.form-control {
+  background-color: white;
+  background-image: none !important;
+  min-height: 44px;
+  border-radius: 6px;
+
+  &:focus {
+    box-shadow: none;
+    border-color: $color-primary;
+  }
+
+  &::placeholder {
+    // color: $color-light-gray;
+    font-size: 14px;
+  }
+
+  &:-ms-input-placeholder {
+    // color: $color-light-gray;
+    font-size: 14px;
+  }
+
+  &::-ms-input-placeholder {
+    // color: $color-light-gray;
+    font-size: 14px;
+  }
+}

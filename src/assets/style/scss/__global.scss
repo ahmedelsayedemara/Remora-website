@@ -1,0 +1,21 @@
+html {
+  // @media screen and (max-width: 600px) {
+  //   font-size: 14px !important;
+  // }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.btn {
+  &:focus {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+

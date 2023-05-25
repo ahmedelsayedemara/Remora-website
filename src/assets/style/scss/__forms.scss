@@ -1,0 +1,39 @@
+label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  // color: $color-nav-dark;
+  margin-bottom: 0.125rem;
+}
+
+.form-control {
+  background-color: white;
+  background-image: none !important;
+  min-height: 40px;
+  border-radius: 8px;
+  // border-color: $color-gray;
+  // color: $color-gray;
+
+  &:focus {
+    box-shadow: none;
+    border-color: $color-primary;
+  }
+
+  &::placeholder {
+    // color: $color-light-gray;
+    font-size: 0.875rem;
+  }
+
+  &:-ms-input-placeholder {
+    // color: $color-light-gray;
+    font-size: 0.875rem;
+  }
+
+  &::-ms-input-placeholder {
+    // color: $color-light-gray;
+    font-size: 0.875rem;
+  }
+}
+
+.form-group {
+  margin-bottom: 22px;
+}

@@ -1,0 +1,25 @@
+::v-deep {
+  .is-invalid {
+    .vs__dropdown-toggle {
+      border-color: #dc3545;
+    }
+
+    .vs__open-indicator {
+      fill: #dc3545;
+    }
+  }
+
+  .vs__dropdown-toggle {
+    min-height: 38px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .vs__search,
+  .vs__search:focus {
+    // color: $color-gray;
+    font-weight: normal;
+    font-size: 0.85rem;
+  }
+}
