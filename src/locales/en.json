@@ -41,5 +41,9 @@
       "CARD_2_TEXT": "Invest with confidence by mimicking the top traders you believe in.",
       "CARD_3_TEXT": "Preset Stop Loss risk mitigation feature"
     }
+  },
+  "FOOTER": {
+    "REMORA_LOCATION": "7742 King Abdulaziz Rd, Al Aarid, Riyadh 13337",
+    "COPY_RIGHTS": "Rights have been reserved for Remora Inc 2022"
   }
 }
