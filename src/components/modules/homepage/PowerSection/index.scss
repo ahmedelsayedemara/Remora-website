@@ -1,0 +1,28 @@
+.power-section {
+  .text-container {
+    h3 {
+      font-weight: 700;
+      color: $color-text-primary;
+    }
+    p {
+      color: $color-text-secondary;
+    }
+    .img-bullet {
+      span {
+        color: $color-text-primary;
+      }
+    }
+  }
+  .img-container {
+    img {
+      width: 100%;
+    }
+  }
+  &:lang(ar) {
+    .img-container {
+      img {
+        transform: scaleX(-1);
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.built-on-section {
+  .text-container {
+    h3 {
+      color: $color-primary;
+      font-weight: 700;
+    }
+  }
+  .cards-container {
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-section {
+  }
+}

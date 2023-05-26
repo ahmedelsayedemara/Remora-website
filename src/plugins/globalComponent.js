@@ -11,6 +11,7 @@ import Button from "@/components/Shared/Forms/Button/index.vue"
 import Toast from "@/components/Shared/Toast/index.vue"
 import FormValidation from "@/components/Shared/FormValidation/index.vue"
 import DefaultLayout from "@/layouts/DefaultLayout/index.vue"
+import SimpleCard from "@/components/Shared/Cards/SimpleCard/index.vue"
 
 const components = {
   ValidationProvider,
@@ -26,6 +27,7 @@ const components = {
   Toast,
   FormValidation,
   DefaultLayout,
+  SimpleCard
 }
 
 Object.entries(components).forEach(([name, component]) => {

@@ -1,20 +1,45 @@
 {
-    "MENU": {
-        "PLATFORM": "Platform",
-        "OVERVIEW": "Overview",
-        "LEADERS": "Leaders",
-        "SUPPORTED_EXCHANGES": "Supported exchanges",
-        "EDUCATION": "Education",
-        "GETTING_STARTED": "Getting started",
-        "TRADING": "Trading",
-        "TRANSACTIONS_AND_PAYMENT": "Transactions and payment",
-        "COMPANY": "Company",
-        "ABOUT": "About",
-        "TEAM": "Team",
-        "BLOG": "Blog",
-        "CONTACT": "Contact",
-        "CONTACT_US": "Contact us",
-        "FAQS": "FAQs",
-        "TRADE_NOW": "Trade Now!"
-      }
+  "MENU": {
+    "PLATFORM": "Platform",
+    "OVERVIEW": "Overview",
+    "LEADERS": "Leaders",
+    "SUPPORTED_EXCHANGES": "Supported exchanges",
+    "EDUCATION": "Education",
+    "GETTING_STARTED": "Getting started",
+    "TRADING": "Trading",
+    "TRANSACTIONS_AND_PAYMENT": "Transactions and payment",
+    "COMPANY": "Company",
+    "ABOUT": "About",
+    "TEAM": "Team",
+    "BLOG": "Blog",
+    "CONTACT": "Contact",
+    "CONTACT_US": "Contact us",
+    "FAQS": "FAQs",
+    "TRADE_NOW": "Trade Now!"
+  },
+  "HOMEPAGE": {
+    "HERO_SECTION": {
+      "TITLE": "Harness the Power of Crypto Trading Automation",
+      "TEXT": "It's Only the Beginning! Join a Trading Platform that Makes Advanced Trading Accessible to All.",
+      "LABEL": "You are One Click Away",
+      "BTN_TEXT": "Join the waitlist"
+    },
+    "BUILT_ON_SECTION": {
+      "TITLE": "Built on Transparency. Powered by Trust.",
+      "TEXT": "Transparency and accountability form the foundation of Remora's trading community. That's why we provide financial metrics and performance data on our leaders to all members. See the metrics that matter. View detailed performance data including how much the followers of individual leaders have made, rather than how much the leader is making themselves",
+      "CARD_1_TITLE": "Trading Alongside Experts",
+      "CARD_1_TEXT": " Copy the trades of experienced investors and view their detailed crypto performance.",
+      "CARD_2_TITLE": "Investing Platform Housed in a Community.",
+      "CARD_2_TEXT": "So much more than just a trading platform. It is a leading collaborative community.",
+      "CARD_3_TITLE": "Success Fee and Simple Leader Subscription Fee",
+      "CARD_3_TEXT": "No Hidden Fees and No Extra Charges.Try it now for FREE!"
+    },
+    "POWER_SECTION": {
+      "TITLE": "Power of Community",
+      "TEXT": "A transparent social trading platform enabling every trader to automatically mirror top-performing crypto investors' in real time.",
+      "CARD_1_TEXT": "Mirror top traders' activities automatically.",
+      "CARD_2_TEXT": "Invest with confidence by mimicking the top traders you believe in.",
+      "CARD_3_TEXT": "Preset Stop Loss risk mitigation feature"
+    }
+  }
 }
