@@ -1,7 +1,12 @@
 <template>
   <div>
     <DefaultLayout>
-      Hi i am Home!
+      <component
+        v-for="(section, index) in sections"
+        :key="index"
+        :is="section.component"
+        :data="section.data"
+      ></component>
     </DefaultLayout>
   </div>
 </template>
@@ -9,9 +14,28 @@
 <script>
 export default {
   name: "HomeComponent",
-  components: {},
+  components: {
+    HeroSection: () => import("@/components/modules/homepage/HeroSection")
+  },
   data() {
-    return {}
+    return {
+      sections: [
+        {
+          id: 1,
+          component: "HeroSection",
+          data: {
+            title: this.$t("HOMEPAGE.HERO_SECTION.TITLE"),
+            text: this.$t("HOMEPAGE.HERO_SECTION.TEXT"),
+            label: this.$t("HOMEPAGE.HERO_SECTION.LABEL"),
+            btnText: this.$t("HOMEPAGE.HERO_SECTION.BTN_TEXT"),
+            img: {
+              url: "homepage_hero_section.png",
+              alt: "alt"
+            }
+          }
+        }
+      ]
+    }
   },
   methods: {}
 }

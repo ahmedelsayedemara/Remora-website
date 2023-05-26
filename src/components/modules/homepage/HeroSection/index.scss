@@ -1,0 +1,39 @@
+.hero-section {
+  .text-container {
+    padding-top: 8rem;
+    h1 {
+      color: $color-primary;
+      font-weight: 700;
+    }
+    p {
+      margin: 0;
+      &.bold {
+        font-weight: 700;
+      }
+    }
+  }
+  .img-container {
+    img {
+      width: 100%;
+    }
+  }
+
+  &:lang(ar) {
+    .img-container {
+      img {
+        transform: scaleX(-1);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-section {
+    margin-bottom: -8rem;
+    .img-container {
+      img {
+        width: 130%;
+      }
+    }
+  }
+}
