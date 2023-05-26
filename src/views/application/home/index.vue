@@ -17,6 +17,7 @@ export default {
   components: {
     HeroSection: () => import("@/components/modules/homepage/HeroSection"),
     BuiltOnSection: () => import("@/components/modules/homepage/BuiltOnSection"),
+    PowerSection: () => import("@/components/modules/homepage/PowerSection")
   },
   data() {
     return {
@@ -63,6 +64,41 @@ export default {
                 text: this.$t("HOMEPAGE.BUILT_ON_SECTION.CARD_3_TEXT"),
                 img: {
                   url: "homepage_built_on_section_card3.svg",
+                  alt: "alt"
+                }
+              }
+            ]
+          }
+        },
+        {
+          id: 3,
+          component: "PowerSection",
+          data: {
+            title: this.$t("HOMEPAGE.POWER_SECTION.TITLE"),
+            text: this.$t("HOMEPAGE.POWER_SECTION.TEXT"),
+            img: {
+              url: "homepage_power_section.png",
+              alt: ""
+            },
+            cards: [
+              {
+                text: this.$t("HOMEPAGE.POWER_SECTION.CARD_1_TEXT"),
+                img: {
+                  url: "homepage_power_section_card1.svg",
+                  alt: "alt"
+                }
+              },
+              {
+                text: this.$t("HOMEPAGE.POWER_SECTION.CARD_2_TEXT"),
+                img: {
+                  url: "homepage_power_section_card2.svg",
+                  alt: "alt"
+                }
+              },
+              {
+                text: this.$t("HOMEPAGE.POWER_SECTION.CARD_3_TEXT"),
+                img: {
+                  url: "homepage_power_section_card3.svg",
                   alt: "alt"
                 }
               }

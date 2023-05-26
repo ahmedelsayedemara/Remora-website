@@ -33,6 +33,13 @@
       "CARD_2_TEXT": "So much more than just a trading platform. It is a leading collaborative community.",
       "CARD_3_TITLE": "Success Fee and Simple Leader Subscription Fee",
       "CARD_3_TEXT": "No Hidden Fees and No Extra Charges.Try it now for FREE!"
+    },
+    "POWER_SECTION": {
+      "TITLE": "Power of Community",
+      "TEXT": "A transparent social trading platform enabling every trader to automatically mirror top-performing crypto investors' in real time.",
+      "CARD_1_TEXT": "Mirror top traders' activities automatically.",
+      "CARD_2_TEXT": "Invest with confidence by mimicking the top traders you believe in.",
+      "CARD_3_TEXT": "Preset Stop Loss risk mitigation feature"
     }
   }
 }

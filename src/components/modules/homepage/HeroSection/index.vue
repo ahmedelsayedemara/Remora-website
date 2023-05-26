@@ -20,6 +20,7 @@
 
 <script>
 export default {
+  name: 'HeroSection',
   props: {
     data: {
       type: Object,
