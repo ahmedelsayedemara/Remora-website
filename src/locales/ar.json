@@ -1,3 +1,20 @@
 {
-  
+  "MENU": {
+    "PLATFORM": "المنصة",
+    "OVERVIEW": "نظرة عامة",
+    "LEADERS": "القادة",
+    "SUPPORTED_EXCHANGES": "التبادلات المدعومة",
+    "EDUCATION": "معرفة",
+    "GETTING_STARTED": "ابدء",
+    "TRADING": "التجارة",
+    "TRANSACTIONS_AND_PAYMENT": "المعاملات والدفع",
+    "COMPANY": "الشركة",
+    "ABOUT": "عن الشركة",
+    "TEAM": "الفريق",
+    "BLOG": "المدونة",
+    "CONTACT": "اتصل بنا",
+    "CONTACT_US": "تواصل معنا",
+    "FAQS": "الأسئلة الشائعة",
+    "TRADE_NOW": "تاجر الآن!"
+  }
 }

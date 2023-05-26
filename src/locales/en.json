@@ -1,3 +1,20 @@
 {
-  
+    "MENU": {
+        "PLATFORM": "Platform",
+        "OVERVIEW": "Overview",
+        "LEADERS": "Leaders",
+        "SUPPORTED_EXCHANGES": "Supported exchanges",
+        "EDUCATION": "Education",
+        "GETTING_STARTED": "Getting started",
+        "TRADING": "Trading",
+        "TRANSACTIONS_AND_PAYMENT": "Transactions and payment",
+        "COMPANY": "Company",
+        "ABOUT": "About",
+        "TEAM": "Team",
+        "BLOG": "Blog",
+        "CONTACT": "Contact",
+        "CONTACT_US": "Contact us",
+        "FAQS": "FAQs",
+        "TRADE_NOW": "Trade Now!"
+      }
 }
