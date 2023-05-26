@@ -15,7 +15,8 @@
 export default {
   name: "HomeComponent",
   components: {
-    HeroSection: () => import("@/components/modules/homepage/HeroSection")
+    HeroSection: () => import("@/components/modules/homepage/HeroSection"),
+    BuiltOnSection: () => import("@/components/modules/homepage/BuiltOnSection"),
   },
   data() {
     return {
@@ -32,6 +33,40 @@ export default {
               url: "homepage_hero_section.png",
               alt: "alt"
             }
+          }
+        },
+        {
+          id: 2,
+          component: "BuiltOnSection",
+          data: {
+            title: this.$t("HOMEPAGE.BUILT_ON_SECTION.TITLE"),
+            text: this.$t("HOMEPAGE.BUILT_ON_SECTION.TEXT"),
+            cards: [
+              {
+                title: this.$t("HOMEPAGE.BUILT_ON_SECTION.CARD_1_TITLE"),
+                text: this.$t("HOMEPAGE.BUILT_ON_SECTION.CARD_1_TEXT"),
+                img: {
+                  url: "homepage_built_on_section_card1.svg",
+                  alt: "alt"
+                }
+              },
+              {
+                title: this.$t("HOMEPAGE.BUILT_ON_SECTION.CARD_2_TITLE"),
+                text: this.$t("HOMEPAGE.BUILT_ON_SECTION.CARD_2_TEXT"),
+                img: {
+                  url: "homepage_built_on_section_card2.svg",
+                  alt: "alt"
+                }
+              },
+              {
+                title: this.$t("HOMEPAGE.BUILT_ON_SECTION.CARD_3_TITLE"),
+                text: this.$t("HOMEPAGE.BUILT_ON_SECTION.CARD_3_TEXT"),
+                img: {
+                  url: "homepage_built_on_section_card3.svg",
+                  alt: "alt"
+                }
+              }
+            ]
           }
         }
       ]

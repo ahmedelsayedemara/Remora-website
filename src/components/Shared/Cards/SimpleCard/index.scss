@@ -1,0 +1,17 @@
+.simple-card {
+  background: #ffffff;
+  border: 1px solid $color-cool-grey-card;
+  border-radius: 16px;
+  height: 100%;
+  padding: 2.5rem 2rem;
+  &.hovered {
+    box-shadow: -7px 20px 85px -8px rgba(0, 0, 0, 0.1);
+  }
+  .card-title {
+    font-weight: 700;
+    color: $color-text-primary;
+  }
+  .card-text {
+    color: $color-text-secondary;
+  }
+}
