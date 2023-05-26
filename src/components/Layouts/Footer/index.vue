@@ -29,7 +29,7 @@
       </b-col>
       <b-col lg="8">
         <b-row>
-          <b-col lg="3" md="6" class="footer__links my-sm-4">
+          <b-col lg="3" md="6" class="footer__links my-lg-0 my-sm-4">
             <h6 class="fs-18">{{ $t("MENU.PLATFORM") }}</h6>
             <div class="footer__links-container">
               <a class="fs-16" href="#" target="_blank">{{ $t("MENU.OVERVIEW") }}</a>
@@ -37,7 +37,7 @@
               <a class="fs-16" href="#" target="_blank">{{ $t("MENU.SUPPORTED_EXCHANGES") }}</a>
             </div>
           </b-col>
-          <b-col lg="3" md="6" class="footer__links my-sm-4">
+          <b-col lg="3" md="6" class="footer__links my-lg-0 my-sm-4">
             <h6 class="fs-18">{{ $t("MENU.EDUCATION") }}</h6>
             <div class="footer__links-container">
               <a class="fs-16" href="#" target="_blank">{{ $t("MENU.GETTING_STARTED") }}</a>
@@ -47,7 +47,7 @@
               }}</a>
             </div>
           </b-col>
-          <b-col lg="3" md="6" class="footer__links my-sm-4">
+          <b-col lg="3" md="6" class="footer__links my-lg-0 my-sm-4">
             <h6 class="fs-18">{{ $t("MENU.COMPANY") }}</h6>
             <div class="footer__links-container">
               <a class="fs-16" href="#" target="_blank">{{ $t("MENU.ABOUT") }}</a>
@@ -55,7 +55,7 @@
               <a class="fs-16" href="#" target="_blank">{{ $t("MENU.BLOG") }}</a>
             </div>
           </b-col>
-          <b-col lg="3" md="6" class="footer__links my-sm-4">
+          <b-col lg="3" md="6" class="footer__links my-lg-0 my-sm-4">
             <h6 class="fs-18">{{ $t("MENU.CONTACT") }}</h6>
             <div class="footer__links-container">
               <a class="fs-16" href="#" target="_blank">{{ $t("MENU.FAQS") }}</a>
