@@ -18,7 +18,8 @@ export default {
     HeroSection: () => import("@/components/modules/homepage/HeroSection"),
     BuiltOnSection: () => import("@/components/modules/homepage/BuiltOnSection"),
     PowerSection: () => import("@/components/modules/homepage/PowerSection"),
-    HowItWorksSection: () => import("@/components/modules/homepage/HowItWorksSection")
+    HowItWorksSection: () => import("@/components/modules/homepage/HowItWorksSection"),
+    OneAppSection: () => import("@/components/modules/homepage/OneAppSection")
   },
   data() {
     return {
@@ -109,7 +110,6 @@ export default {
         {
           id: 4,
           component: "HowItWorksSection",
-
           data: {
             title: this.$t("HOMEPAGE.HOW_IT_WORKS_SECTION.TITLE"),
             text: this.$t("HOMEPAGE.HOW_IT_WORKS_SECTION.TEXT"),
@@ -132,6 +132,22 @@ export default {
                 tooltip: this.$t("HOMEPAGE.HOW_IT_WORKS_SECTION.STEP_3_TOOLTIP")
               }
             ]
+          }
+        },
+        {
+          id: 5,
+          component: "OneAppSection",
+          data: {
+            title: this.$t("HOMEPAGE.ONE_APP_SECTION.TITLE"),
+            text: this.$t("HOMEPAGE.ONE_APP_SECTION.TEXT"),
+            features: [
+              this.$t("HOMEPAGE.ONE_APP_SECTION.FEATURE1"),
+              this.$t("HOMEPAGE.ONE_APP_SECTION.FEATURE2")
+            ],
+            img: {
+              url: "homepage_one_app_section.png",
+              alt: ""
+            }
           }
         }
       ]

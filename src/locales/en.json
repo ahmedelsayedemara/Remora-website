@@ -48,6 +48,12 @@
       "STEP_2_TOOLTIP": "Review leader board and choose  a leader/s ",
       "STEP_3_TOOLTIP": "Dedicate funds and Copy-Trade your leader/s ",
       "BTN_TEXT": "Watch explainer video"
+    },
+    "ONE_APP_SECTION": {
+      "TITLE": "One App. Unlimited Possibilities.",
+      "TEXT": "We're making crypto investing accessible to everyone, everywhere, enabling you to trade on a mobile app designed for usability and optimized for capability with an intuitive UI for fast and frictionless crypto trading investing.",
+      "FEATURE1": "Get Easy and reliable crypto-reading features at your fingertips.",
+      "FEATURE2": "Access a complete picture of your trades' performance and metrics. Anytime, anywhere!"
     }
   }
 }
