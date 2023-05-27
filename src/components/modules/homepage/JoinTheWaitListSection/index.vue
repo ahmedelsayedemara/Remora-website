@@ -1,6 +1,5 @@
 <template>
-  <b-container fluid class="join-the-waitlist">
-    <!-- <img src="@/assets/images/homepage_join_waitlist_section3.png" class="background-img" /> -->
+  <b-container fluid class="join-the-waitlist" ref="myDiv">
     <b-row class="w-75 m-auto">
       <b-col class="mb-5 pb-2">
         <h3 class="fs-48 fw-700 text-center mb-4">{{ data.title }}</h3>

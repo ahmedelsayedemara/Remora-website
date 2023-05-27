@@ -22,7 +22,8 @@ export default {
     OneAppSection: () => import("@/components/modules/homepage/OneAppSection"),
     QandASection: () => import("@/components/modules/homepage/QandASection"),
     OurPartnersSection: () => import("@/components/modules/homepage/OurPartnersSection"),
-    JoinTheWaitListSection: () => import("@/components/modules/homepage/JoinTheWaitListSection")
+    JoinTheWaitListSection: () => import("@/components/modules/homepage/JoinTheWaitListSection"),
+    SharkSection: () => import("@/components/modules/homepage/SharkSection")
   },
   data() {
     return {
@@ -108,6 +109,32 @@ export default {
                 }
               }
             ]
+          }
+        },
+        {
+          id: 9,
+          component: "SharkSection",
+          data: {
+            img: {
+              url: "homepage_shark_section_shark.png",
+              alt: ""
+            },
+            upperCard: {
+              img: {
+                url: "homepage_shark_section_card1.svg",
+                alt: ""
+              },
+              title: this.$t("HOMEPAGE.SHARK_SECTION.CARD_1_TITLE"),
+              text: this.$t("HOMEPAGE.SHARK_SECTION.CARD_1_TEXT")
+            },
+            lowerCard: {
+              img: {
+                url: "homepage_shark_section_card2.svg",
+                alt: ""
+              },
+              title: this.$t("HOMEPAGE.SHARK_SECTION.CARD_2_TITLE"),
+              text: this.$t("HOMEPAGE.SHARK_SECTION.CARD_2_TEXT")
+            }
           }
         },
         {
@@ -240,8 +267,7 @@ export default {
         }
       ]
     }
-  },
-  methods: {}
+  }
 }
 </script>
 

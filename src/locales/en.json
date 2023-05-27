@@ -85,6 +85,12 @@
       "INPUT_1_PLACEHOLDER": "Email Address",
       "INPUT_2_PLACEHOLDER": "Phone Number",
       "INPUT_3_PLACEHOLDER": "I want to join as a leader"
+    },
+    "SHARK_SECTION": {
+      "CARD_1_TITLE": "A leader",
+      "CARD_1_TEXT": "A professional trader that you will choose and copy their trades automatically.",
+      "CARD_2_TITLE": "A Follower",
+      "CARD_2_TEXT": "Someone who might be busy and want experienced traders to manage their trading activity."
     }
   },
   "BLOG": {
