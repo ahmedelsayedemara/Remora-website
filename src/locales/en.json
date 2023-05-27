@@ -56,6 +56,15 @@
       "FEATURE2": "Access a complete picture of your trades' performance and metrics. Anytime, anywhere!"
     }
   },
+  "BLOG": {
+    "BLOG_TITLE": "Blog page",
+    "CHOOSE_CATEGORY": "Choose category",
+    "NEWS_AND_ARTICLES": "News and Articles",
+    "SUBTITLE": "Find the latest crypto markets news, updates, and strategies."
+  },
+  "GLOBAL": {
+    "NO_MATCHING": "No Data"
+  },
   "FOOTER": {
     "REMORA_LOCATION": "7742 King Abdulaziz Rd, Al Aarid, Riyadh 13337",
     "COPY_RIGHTS": "Rights have been reserved for Remora Inc 2022"
