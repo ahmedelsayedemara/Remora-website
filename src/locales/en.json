@@ -57,13 +57,18 @@
     }
   },
   "BLOG": {
+    "BLOG": "Blog",
     "BLOG_TITLE": "Blog page",
     "CHOOSE_CATEGORY": "Choose category",
     "NEWS_AND_ARTICLES": "News and Articles",
-    "SUBTITLE": "Find the latest crypto markets news, updates, and strategies."
+    "SUBTITLE": "Find the latest crypto markets news, updates, and strategies.",
+    "YOU_MAY_ALSO_LIKE": "You may also like",
+    "TOP_ARTICLES": "Top Articles for this month"
   },
   "GLOBAL": {
-    "NO_MATCHING": "No Data"
+    "NO_MATCHING": "No Data",
+    "SHOW_MORE": "Show more",
+    "HOME": "Home"
   },
   "FOOTER": {
     "REMORA_LOCATION": "7742 King Abdulaziz Rd, Al Aarid, Riyadh 13337",
