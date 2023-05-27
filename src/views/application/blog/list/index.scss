@@ -1,0 +1,19 @@
+.blog {
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 5.5rem 0 2.938rem;
+        background: $color-cool-grey-section;
+
+        h1 {
+            font-weight: 700;
+            color: $color-primary;
+        }
+    }
+
+    &__select-box {
+        margin-top: 2rem;
+    }
+}

@@ -95,7 +95,7 @@ export default {
             },
             {
               value: this.$t("MENU.BLOG"),
-              path: "#"
+              path: "/blog"
             },
             {
               value: this.$t("MENU.CONTACT"),
