@@ -13,6 +13,7 @@
       </b-col>
       <b-col cols="12" lg="6" class="img-container">
         <img :src="require(`@/assets/images/${data.img.url}`)" :alt="data.img.alt" />
+        <div class="mask d-none d-xl-block"></div>
       </b-col>
     </b-row>
   </b-container>

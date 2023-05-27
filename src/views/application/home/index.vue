@@ -17,7 +17,8 @@ export default {
   components: {
     HeroSection: () => import("@/components/modules/homepage/HeroSection"),
     BuiltOnSection: () => import("@/components/modules/homepage/BuiltOnSection"),
-    PowerSection: () => import("@/components/modules/homepage/PowerSection")
+    PowerSection: () => import("@/components/modules/homepage/PowerSection"),
+    HowItWorksSection: () => import("@/components/modules/homepage/HowItWorksSection")
   },
   data() {
     return {
@@ -101,6 +102,34 @@ export default {
                   url: "homepage_power_section_card3.svg",
                   alt: "alt"
                 }
+              }
+            ]
+          }
+        },
+        {
+          id: 4,
+          component: "HowItWorksSection",
+
+          data: {
+            title: this.$t("HOMEPAGE.HOW_IT_WORKS_SECTION.TITLE"),
+            text: this.$t("HOMEPAGE.HOW_IT_WORKS_SECTION.TEXT"),
+            btnText: this.$t("HOMEPAGE.HOW_IT_WORKS_SECTION.BTN_TEXT"),
+            img: {
+              url: "homepage_how_it_works_section_btn.svg",
+              alt: ""
+            },
+            steps: [
+              {
+                number: "01",
+                tooltip: this.$t("HOMEPAGE.HOW_IT_WORKS_SECTION.STEP_1_TOOLTIP")
+              },
+              {
+                number: "02",
+                tooltip: this.$t("HOMEPAGE.HOW_IT_WORKS_SECTION.STEP_2_TOOLTIP")
+              },
+              {
+                number: "03",
+                tooltip: this.$t("HOMEPAGE.HOW_IT_WORKS_SECTION.STEP_3_TOOLTIP")
               }
             ]
           }

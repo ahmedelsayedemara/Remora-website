@@ -40,6 +40,14 @@
       "CARD_1_TEXT": "Mirror top traders' activities automatically.",
       "CARD_2_TEXT": "Invest with confidence by mimicking the top traders you believe in.",
       "CARD_3_TEXT": "Preset Stop Loss risk mitigation feature"
+    },
+    "HOW_IT_WORKS_SECTION": {
+      "TITLE": "How it Works",
+      "TEXT": "Easy Setup For Binance Users ",
+      "STEP_1_TOOLTIP": "Create your Remora profile and link your Binance account ",
+      "STEP_2_TOOLTIP": "Review leader board and choose  a leader/s ",
+      "STEP_3_TOOLTIP": "Dedicate funds and Copy-Trade your leader/s ",
+      "BTN_TEXT": "Watch explainer video"
     }
   }
 }
