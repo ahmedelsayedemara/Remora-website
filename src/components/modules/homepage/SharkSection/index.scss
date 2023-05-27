@@ -1,0 +1,80 @@
+.sharks-section {
+  background-image: url(~@/assets/images/homepage_shark_section_bg.jpg);
+  padding: 10rem 0;
+
+  .img-container {
+    position: relative;
+    padding: 0 8rem !important;
+
+    > img {
+      width: 100%;
+    }
+    .info-card {
+      background-color: $color-white;
+      color: $color-text-primary;
+      box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05);
+      border-radius: 24px;
+      width: fit-content;
+      padding: 1.5rem 1rem;
+      position: absolute;
+      min-width: 600px;
+
+      &.upper {
+        top: -90px;
+        left: -35px;
+      }
+      &.lower {
+        bottom: -90px;
+        right: 300px;
+      }
+
+      img {
+        margin-inline-end: 1.5rem;
+        width: 6rem;
+      }
+
+      p {
+        max-width: 29rem;
+        text-align: start;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .sharks-section {
+    .img-container {
+      padding: 0 1rem !important;
+      .info-card {
+        min-width: fit-content;
+
+        &.upper {
+          position: relative !important;
+          margin: auto;
+          margin-bottom: -8rem;
+          left: auto;
+        }
+        &.lower {
+          position: relative !important;
+          margin: auto;
+          margin-top: -10rem;
+          right: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .sharks-section {
+    .img-container {
+      .info-card {
+        min-width: 100%;
+
+        img{
+            width: 4rem;
+        }
+      }
+    }
+  }
+}
