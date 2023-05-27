@@ -62,7 +62,14 @@
     }
   }
 
-  &__artcles {
+  &__articles {
     margin-top: 3.25rem;
+  }
+
+  &__pagination {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
