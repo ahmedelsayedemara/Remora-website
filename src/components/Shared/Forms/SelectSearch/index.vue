@@ -19,7 +19,7 @@
       v-on="$listeners"
     >
       <template #no-options="">
-        {{ $t("NO_MATCHING") }}
+        {{ $t("GLOBAL.NO_MATCHING") }}
       </template>
     </v-select>
 

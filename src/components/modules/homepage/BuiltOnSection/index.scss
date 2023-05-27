@@ -1,0 +1,14 @@
+.built-on-section {
+  .text-container {
+    h3 {
+      color: $color-primary;
+      font-weight: 700;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .built-on-section {
+    margin-top: -6rem;
+  }
+}

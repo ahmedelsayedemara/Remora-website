@@ -1,0 +1,87 @@
+.join-the-waitlist {
+  padding-top: 5rem;
+  padding-bottom: 11rem;
+  background-color: $color-cool-grey-section;
+
+  h3 {
+    color: $color-orange;
+  }
+  p {
+    color: $color-text-primary;
+    max-width: 50rem;
+  }
+  label {
+    color: $color-text-secondary;
+    &.checkbox-label {
+      color: $color-text-primary;
+    }
+  }
+
+  .btn-container {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -10rem;
+      left: (calc(100% + 5rem));
+      width: 150%;
+      height: 38rem;
+      background-repeat: no-repeat;
+      background-image: url("~@/assets/images/homepage_join_waitlist_section1.png");
+      z-index: 1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -11rem;
+      right: calc(100% + 4rem);
+      width: 30rem;
+      height: 38rem;
+      background-repeat: no-repeat;
+      background-image: url("~@/assets/images/homepage_join_waitlist_section2.png");
+      z-index: 1;
+    }
+
+    @media screen and (max-width: 1200px) {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+::v-deep .vue-tel-input {
+  min-height: 44px;
+  border-radius: 6px;
+  border-color: $color-input-border;
+  padding: 1px;
+  &:focus-within {
+    box-shadow: none;
+    border-color: $color-primary;
+  }
+  .vti__dropdown {
+    padding: 5px 0;
+    background-color: $color-white;
+    .vti__selection {
+      background-color: $color-white;
+      border-inline-end: 1px solid $color-input-border;
+    }
+    .vti__dropdown-list {
+      width: 15rem;
+      z-index: 9999;
+      top: 44px;
+      li {
+        font-size: 0.75rem;
+        font-weight: 400;
+        color: $color-text-primary;
+        padding: 5px 3px;
+        vertical-align: middle;
+      }
+      &:lang(ar) {
+        left: auto;
+        right: 0;
+        text-align: right;
+      }
+    }
+  }
+}

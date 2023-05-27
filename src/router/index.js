@@ -12,7 +12,7 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes: [...publicRoutes, ...protectedRoutes],
 });
-router.beforeEach(handleRouteNavigation);
+// router.beforeEach(handleRouteNavigation);
 const originalPush = Router.prototype.push;
 Router.prototype.push = function push(location) {
   return originalPush.call(this, location).catch((err) => err);
