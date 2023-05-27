@@ -57,6 +57,11 @@
       text-decoration: none;
       color: $color-white;
       font-weight: 400;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        color: $color-orange;
+        margin-inline-start: 2px;
+      }
     }
   }
 
