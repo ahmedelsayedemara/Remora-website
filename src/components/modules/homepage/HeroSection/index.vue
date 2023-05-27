@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'HeroSection',
+  name: "HeroSection",
   props: {
     data: {
       type: Object,

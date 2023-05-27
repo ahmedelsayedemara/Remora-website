@@ -19,7 +19,11 @@ export default {
     BuiltOnSection: () => import("@/components/modules/homepage/BuiltOnSection"),
     PowerSection: () => import("@/components/modules/homepage/PowerSection"),
     HowItWorksSection: () => import("@/components/modules/homepage/HowItWorksSection"),
-    OneAppSection: () => import("@/components/modules/homepage/OneAppSection")
+    OneAppSection: () => import("@/components/modules/homepage/OneAppSection"),
+    QandASection: () => import("@/components/modules/homepage/QandASection"),
+    OurPartnersSection: () => import("@/components/modules/homepage/OurPartnersSection"),
+    JoinTheWaitListSection: () => import("@/components/modules/homepage/JoinTheWaitListSection"),
+    SharkSection: () => import("@/components/modules/homepage/SharkSection")
   },
   data() {
     return {
@@ -108,6 +112,32 @@ export default {
           }
         },
         {
+          id: 9,
+          component: "SharkSection",
+          data: {
+            img: {
+              url: "homepage_shark_section_shark.png",
+              alt: ""
+            },
+            upperCard: {
+              img: {
+                url: "homepage_shark_section_card1.svg",
+                alt: ""
+              },
+              title: this.$t("HOMEPAGE.SHARK_SECTION.CARD_1_TITLE"),
+              text: this.$t("HOMEPAGE.SHARK_SECTION.CARD_1_TEXT")
+            },
+            lowerCard: {
+              img: {
+                url: "homepage_shark_section_card2.svg",
+                alt: ""
+              },
+              title: this.$t("HOMEPAGE.SHARK_SECTION.CARD_2_TITLE"),
+              text: this.$t("HOMEPAGE.SHARK_SECTION.CARD_2_TEXT")
+            }
+          }
+        },
+        {
           id: 4,
           component: "HowItWorksSection",
           data: {
@@ -149,11 +179,95 @@ export default {
               alt: ""
             }
           }
+        },
+        {
+          id: 8,
+          component: "JoinTheWaitListSection",
+          data: {
+            title: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.TITLE"),
+            text: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.TEXT"),
+            btnText: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.BTN_TEXT"),
+            inputs: [
+              {
+                placeholder: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.INPUT_1_PLACEHOLDER"),
+                label: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.INPUT_1_PLACEHOLDER"),
+                type: "email"
+              },
+              {
+                placeholder: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.INPUT_2_PLACEHOLDER"),
+                label: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.INPUT_2_PLACEHOLDER"),
+                type: "phone-number"
+              },
+              {
+                placeholder: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.INPUT_3_PLACEHOLDER"),
+                label: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.INPUT_3_PLACEHOLDER"),
+                type: "checkbox"
+              }
+            ]
+          }
+        },
+        {
+          id: 6,
+          component: "QandASection",
+          data: {
+            title: this.$t("HOMEPAGE.Q_AND_A_SECTION.TITLE"),
+            text: this.$t("HOMEPAGE.Q_AND_A_SECTION.TEXT"),
+            questions: [
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION1"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER1")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION2"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER2")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION3"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER3")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION4"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER4")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION5"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER5")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION6"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER6")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION7"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER7")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION8"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER8")
+              }
+            ]
+          }
+        },
+        {
+          id: 7,
+          component: "OurPartnersSection",
+          data: {
+            title: this.$t("HOMEPAGE.OUR_PARTNERS_SECTION.TITLE"),
+            images: [
+              {
+                url: "cyper-me-logo.png",
+                alt: ""
+              },
+              {
+                url: "misk-accelerator-logo.png",
+                alt: ""
+              }
+            ]
+          }
         }
       ]
     }
-  },
-  methods: {}
+  }
 }
 </script>
 
