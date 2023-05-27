@@ -1,0 +1,25 @@
+.breadcrumb {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent !important;
+  padding: 0 !important;
+
+  a,
+  p,
+  span {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  a, span {
+    text-decoration: none;
+    color: $color-text-secondary
+  }
+  p.current {
+    color: $color-text-primary;
+  }
+
+}
