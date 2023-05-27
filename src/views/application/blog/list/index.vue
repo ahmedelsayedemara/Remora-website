@@ -18,12 +18,23 @@
           <h3 class="fs-40">{{ $t("BLOG.NEWS_AND_ARTICLES") }}</h3>
           <p class="fs-18">{{ $t("BLOG.SUBTITLE") }}</p>
           <div class="blog__filter">
-            <div v-for="(item, idx) in filterItems" :key="idx" class="blog__filter-item">
+            <div
+              v-for="(item, idx) in filterItems"
+              :key="idx"
+              class="blog__filter-item cursor-pointer"
+            >
               <span class="fs-12">{{ item.name }}</span>
             </div>
           </div>
-          <div class="blog__artcles">
-            <ArticleCard />
+          <div class="blog__articles">
+            <b-row>
+              <b-col v-for="article in articleList" :key="article.id" lg="4">
+                <ArticleCard :article="article" @handleGetDetails="getArticleDetails" />
+              </b-col>
+            </b-row>
+          </div>
+          <div class="blog__pagination">
+            <Pagination :totalItems="totalItemCount" :perPage="perPage" :currentPage="currentPage" />
           </div>
         </b-container>
       </div>
@@ -33,12 +44,17 @@
 
 <script>
 import ArticleCard from "@/components/modules/blog/ArticleCard/index.vue"
+import Pagination from "@/components/Shared/Pagination/index.vue"
 export default {
   components: {
-    ArticleCard
+    ArticleCard,
+    Pagination
   },
   data() {
     return {
+      perPage: 9,
+      currentPage: 1,
+      totalItemCount: 1107,
       formValues: {
         categoryId: null
       },
@@ -169,10 +185,347 @@ export default {
           id: 28,
           name: "Tutorial"
         }
+      ],
+      articleListAR: [
+        {
+          id: 1,
+          title: "هذا هو المكان الذي سيكون فيه عنوان مقالتنا أو عنوانها.",
+          image: "01-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. الهدف من استخدام لوريم إيبسوم بسيط ...",
+          published_at: "2022/11/21 07:13:51"
+
+        },
+        {
+          id: 2,
+          title: "هذا هو المكان الذي سيكون فيه عنوان مقالتنا أو عنوانها.",
+          image: "02-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. الهدف من استخدام لوريم إيبسوم بسيط ...",
+          published_at: "2022/11/21 07:13:51"
+
+        },
+        {
+          id: 3,
+          title: "هذا هو المكان الذي سيكون فيه عنوان مقالتنا أو عنوانها.",
+          image: "03-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. الهدف من استخدام لوريم إيبسوم بسيط ...",
+          published_at: "2022/11/21 07:13:51"
+
+        },
+        {
+          id: 4,
+          title: "هذا هو المكان الذي سيكون فيه عنوان مقالتنا أو عنوانها.",
+          image: "04-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. الهدف من استخدام لوريم إيبسوم بسيط ...",
+          published_at: "2022/11/21 07:13:51"
+
+        },
+        {
+          id: 5,
+          title: "هذا هو المكان الذي سيكون فيه عنوان مقالتنا أو عنوانها.",
+          image: "05-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. الهدف من استخدام لوريم إيبسوم بسيط ...",
+          published_at: "2022/11/21 07:13:51"
+
+        },
+        {
+          id: 6,
+          title: "هذا هو المكان الذي سيكون فيه عنوان مقالتنا أو عنوانها.",
+          image: "06-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. الهدف من استخدام لوريم إيبسوم بسيط ...",
+          published_at: "2022/11/21 07:13:51"
+
+        },
+        {
+          id: 7,
+          title: "هذا هو المكان الذي سيكون فيه عنوان مقالتنا أو عنوانها.",
+          image: "07-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. الهدف من استخدام لوريم إيبسوم بسيط ...",
+          published_at: "2022/11/21 07:13:51"
+
+        },
+        {
+          id: 8,
+          title: "هذا هو المكان الذي سيكون فيه عنوان مقالتنا أو عنوانها.",
+          image: "08-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. الهدف من استخدام لوريم إيبسوم بسيط ...",
+          published_at: "2022/11/21 07:13:51"
+
+        },
+        {
+          id: 9,
+          title: "هذا هو المكان الذي سيكون فيه عنوان مقالتنا أو عنوانها.",
+          image: "09-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. الهدف من استخدام لوريم إيبسوم بسيط ...",
+          published_at: "2022/11/21 07:13:51"
+
+        }
+      ],
+      articleListEN: [
+        {
+          id: 1,
+          title: "This is where the heading title of our article will be.",
+          image: "01-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is simple...",
+          published_at: "2022/11/21 07:13:51"
+
+        },
+        {
+          id: 2,
+          title: "This is where the heading title of our article will be.",
+          image: "02-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is simple...",
+          published_at: "2022/11/21 07:13:51"
+
+        },
+        {
+          id: 3,
+          title: "This is where the heading title of our article will be.",
+          image: "03-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is simple...",
+          published_at: "2022/11/21 07:13:51"
+
+        },
+        {
+          id: 4,
+          title: "This is where the heading title of our article will be.",
+          image: "04-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is simple...",
+          published_at: "2022/11/21 07:13:51"
+
+        },
+        {
+          id: 5,
+          title: "This is where the heading title of our article will be.",
+          image: "05-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is simple...",
+          published_at: "2022/11/21 07:13:51"
+
+        },
+        {
+          id: 6,
+          title: "This is where the heading title of our article will be.",
+          image: "06-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is simple...",
+          published_at: "2022/11/21 07:13:51"
+
+        },
+        {
+          id: 7,
+          title: "This is where the heading title of our article will be.",
+          image: "07-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is simple...",
+          published_at: "2022/11/21 07:13:51"
+
+        },
+        {
+          id: 8,
+          title: "This is where the heading title of our article will be.",
+          image: "08-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is simple...",
+          published_at: "2022/11/21 07:13:51"
+
+        },
+        {
+          id: 9,
+          title: "This is where the heading title of our article will be.",
+          image: "09-blog-card.svg",
+          tags: [
+            {
+              id: 1,
+              name: "Trading"
+            },
+            {
+              id: 2,
+              name: "Altcoins"
+            }
+          ],
+          description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is simple...",
+          published_at: "2022/11/21 07:13:51"
+
+        }
       ]
     }
   },
-  methods: {}
+  computed: {
+    articleList() {
+      return this.$i18n.locale == "ar" ? this.articleListAR : this.articleListEN
+    }
+  },
+  methods: {
+    getArticleDetails(articleId) {
+      this.$router.push(`/blog-details/${articleId}`)
+    }
+  }
 }
 </script>
 

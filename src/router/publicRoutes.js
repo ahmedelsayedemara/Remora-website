@@ -9,6 +9,11 @@ const publicRoutes = [
     name: "blog",
     component: () => import("../views/application/blog/list/index.vue")
   },
+  { 
+    path:"/blog-details/:id",
+    name: "blog-details",
+    component: () => import("../views/application/blog/details/index.vue")
+  },
   ]
 
 export const publicRoutesPaths = publicRoutes.map((route) => route.path)
