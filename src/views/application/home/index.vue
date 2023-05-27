@@ -21,7 +21,8 @@ export default {
     HowItWorksSection: () => import("@/components/modules/homepage/HowItWorksSection"),
     OneAppSection: () => import("@/components/modules/homepage/OneAppSection"),
     QandASection: () => import("@/components/modules/homepage/QandASection"),
-    OurPartnersSection: () => import("@/components/modules/homepage/OurPartnersSection")
+    OurPartnersSection: () => import("@/components/modules/homepage/OurPartnersSection"),
+    JoinTheWaitListSection: () => import("@/components/modules/homepage/JoinTheWaitListSection")
   },
   data() {
     return {
@@ -150,6 +151,32 @@ export default {
               url: "homepage_one_app_section.png",
               alt: ""
             }
+          }
+        },
+        {
+          id: 8,
+          component: "JoinTheWaitListSection",
+          data: {
+            title: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.TITLE"),
+            text: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.TEXT"),
+            btnText: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.BTN_TEXT"),
+            inputs: [
+              {
+                placeholder: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.INPUT_1_PLACEHOLDER"),
+                label: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.INPUT_1_PLACEHOLDER"),
+                type: "email"
+              },
+              {
+                placeholder: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.INPUT_2_PLACEHOLDER"),
+                label: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.INPUT_2_PLACEHOLDER"),
+                type: "phone-number"
+              },
+              {
+                placeholder: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.INPUT_3_PLACEHOLDER"),
+                label: this.$t("HOMEPAGE.JOIN_THE_WAITLIST_SECTION.INPUT_3_PLACEHOLDER"),
+                type: "checkbox"
+              }
+            ]
           }
         },
         {

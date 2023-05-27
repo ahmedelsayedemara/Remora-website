@@ -77,6 +77,14 @@
     },
     "OUR_PARTNERS_SECTION": {
       "TITLE": "Our Partners"
+    },
+    "JOIN_THE_WAITLIST_SECTION": {
+      "TITLE": "Join the waitlist",
+      "TEXT": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is simple.",
+      "BTN_TEXT": "Join the waitlist",
+      "INPUT_1_PLACEHOLDER": "Email Address",
+      "INPUT_2_PLACEHOLDER": "Phone Number",
+      "INPUT_3_PLACEHOLDER": "I want to join as a leader"
     }
   },
   "BLOG": {
