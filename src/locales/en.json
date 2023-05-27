@@ -55,5 +55,9 @@
       "FEATURE1": "Get Easy and reliable crypto-reading features at your fingertips.",
       "FEATURE2": "Access a complete picture of your trades' performance and metrics. Anytime, anywhere!"
     }
+  },
+  "FOOTER": {
+    "REMORA_LOCATION": "7742 King Abdulaziz Rd, Al Aarid, Riyadh 13337",
+    "COPY_RIGHTS": "Rights have been reserved for Remora Inc 2022"
   }
 }
