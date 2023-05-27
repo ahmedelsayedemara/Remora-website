@@ -54,6 +54,26 @@
       "TEXT": "We're making crypto investing accessible to everyone, everywhere, enabling you to trade on a mobile app designed for usability and optimized for capability with an intuitive UI for fast and frictionless crypto trading investing.",
       "FEATURE1": "Get Easy and reliable crypto-reading features at your fingertips.",
       "FEATURE2": "Access a complete picture of your trades' performance and metrics. Anytime, anywhere!"
+    },
+    "Q_AND_A_SECTION": {
+      "TITLE": "Frequently asked questions",
+      "TEXT": "It is a long established fact that a reader will be distracted by the readable content of a pag",
+      "QUESTION1": "What is copy trading?",
+      "ANSWER1": "Copy trading is an innovative vision that allows users and new traders to 'copy' the trades of a skilled investor automatically without extra effort or a great experience- helping new traders gain from the wisdom of the crowd and top investors to share their knowledge for income.",
+      "QUESTION2": "What makes copy trading an excellent tool for new investors?",
+      "ANSWER2": "answer 2",
+      "QUESTION3": "How does copy trading work?",
+      "ANSWER3": "answer 3",
+      "QUESTION4": "Is there a way for me to pick a leader to copy?",
+      "ANSWER4": "answer 4",
+      "QUESTION5": "How long does it take for a copied trade to appear in my trades?",
+      "ANSWER5": "answer 5",
+      "QUESTION6": "How much will copy trading cost me?",
+      "ANSWER6": "answer 6",
+      "QUESTION7": "What is the minimum amount needed to copy another trader?",
+      "ANSWER7": "answer 7",
+      "QUESTION8": "Can other traders copy me?",
+      "ANSWER8": "answer 8"
     }
   },
   "BLOG": {

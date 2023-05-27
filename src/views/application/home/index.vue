@@ -19,7 +19,8 @@ export default {
     BuiltOnSection: () => import("@/components/modules/homepage/BuiltOnSection"),
     PowerSection: () => import("@/components/modules/homepage/PowerSection"),
     HowItWorksSection: () => import("@/components/modules/homepage/HowItWorksSection"),
-    OneAppSection: () => import("@/components/modules/homepage/OneAppSection")
+    OneAppSection: () => import("@/components/modules/homepage/OneAppSection"),
+    QandASection: () => import("@/components/modules/homepage/QandASection")
   },
   data() {
     return {
@@ -148,6 +149,48 @@ export default {
               url: "homepage_one_app_section.png",
               alt: ""
             }
+          }
+        },
+        {
+          id: 6,
+          component: "QandASection",
+          data: {
+            title: this.$t("HOMEPAGE.Q_AND_A_SECTION.TITLE"),
+            text: this.$t("HOMEPAGE.Q_AND_A_SECTION.TEXT"),
+            questions: [
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION1"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER1")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION2"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER2")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION3"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER3")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION4"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER4")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION5"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER5")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION6"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER6")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION7"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER7")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION8"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER8")
+              }
+            ]
           }
         }
       ]

@@ -1,0 +1,25 @@
+.qa-section {
+  padding: 20px;
+  border-radius: 5px;
+
+  h3 {
+    color: $color-text-primary;
+  }
+  p {
+    color: $color-text-primary;
+  }
+  .toggle-btn {
+    color: $color-text-primary;
+    .chevron {
+      transition: 200ms;
+    }
+
+    &.not-collapsed {
+      font-weight: 700 !important;
+      .chevron {
+        rotate: -180deg !important;
+        transition: 200ms;
+      }
+    }
+  }
+}
