@@ -58,7 +58,9 @@
   },
   "BLOG": {
     "BLOG_TITLE": "Blog page",
-    "CHOOSE_CATEGORY": "Choose category"
+    "CHOOSE_CATEGORY": "Choose category",
+    "NEWS_AND_ARTICLES": "News and Articles",
+    "SUBTITLE": "Find the latest crypto markets news, updates, and strategies."
   },
   "GLOBAL": {
     "NO_MATCHING": "No Data"
