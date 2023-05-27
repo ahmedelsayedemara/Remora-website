@@ -1,0 +1,84 @@
+.steps-container {
+  background-color: $color-cool-grey-section;
+  .steps {
+    position: relative;
+    h2 {
+      color: $color-text-primary;
+    }
+    .background-dashed-line {
+      position: absolute;
+      top: 2.75rem;
+      left: calc(100% / 6);
+      width: calc(100% - (100% / 3));
+      height: 1px;
+      border-top: 2px dashed $color-orange;
+      z-index: 0;
+    }
+
+    .step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      .outer-circle {
+        width: 5.5rem;
+        height: 5.5rem;
+        border-radius: 50%;
+        background: $color-orange-light;
+        margin: 0 auto 2rem;
+        position: relative;
+        z-index: 55;
+        .inner-circle {
+          background: $color-orange;
+          width: 3.25rem;
+          height: 3.25rem;
+          border-radius: 50%;
+          color: white;
+          opacity: 1;
+        }
+      }
+
+      .tooltip-how {
+        padding: 2rem;
+        min-height: 65%;
+        position: relative;
+        margin-top: 10px;
+        background: #ffffff;
+        border: 1px solid $color-cool-grey-card;
+        box-shadow: 24px 24px 80px -16px rgba(0, 0, 0, 0.1);
+        border-radius: 16px;
+        color: $color-text-primary;
+        @media screen and (max-width: 768px) {
+          min-height: auto;
+        }
+
+        .inner {
+          position: absolute;
+          top: -22px;
+          left: 50%;
+          transform: translateX(-50%);
+          border-bottom-width: 18px;
+          border-left-width: 10px;
+          border-right-width: 10px;
+          border-style: solid;
+          border-color: transparent transparent $color-cool-grey-card transparent;
+          &::before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-bottom-width: 22px;
+            border-left-width: 12px;
+            border-right-width: 12px;
+            border-style: solid;
+            border-color: transparent transparent white transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .watch-video-btn {
+    height: 67px;
+  }
+}

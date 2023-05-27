@@ -40,6 +40,20 @@
       "CARD_1_TEXT": "Mirror top traders' activities automatically.",
       "CARD_2_TEXT": "Invest with confidence by mimicking the top traders you believe in.",
       "CARD_3_TEXT": "Preset Stop Loss risk mitigation feature"
+    },
+    "HOW_IT_WORKS_SECTION": {
+      "TITLE": "How it Works",
+      "TEXT": "Easy Setup For Binance Users ",
+      "STEP_1_TOOLTIP": "Create your Remora profile and link your Binance account ",
+      "STEP_2_TOOLTIP": "Review leader board and choose  a leader/s ",
+      "STEP_3_TOOLTIP": "Dedicate funds and Copy-Trade your leader/s ",
+      "BTN_TEXT": "Watch explainer video"
+    },
+    "ONE_APP_SECTION": {
+      "TITLE": "One App. Unlimited Possibilities.",
+      "TEXT": "We're making crypto investing accessible to everyone, everywhere, enabling you to trade on a mobile app designed for usability and optimized for capability with an intuitive UI for fast and frictionless crypto trading investing.",
+      "FEATURE1": "Get Easy and reliable crypto-reading features at your fingertips.",
+      "FEATURE2": "Access a complete picture of your trades' performance and metrics. Anytime, anywhere!"
     }
   },
   "FOOTER": {
