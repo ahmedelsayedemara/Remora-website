@@ -20,7 +20,8 @@ export default {
     PowerSection: () => import("@/components/modules/homepage/PowerSection"),
     HowItWorksSection: () => import("@/components/modules/homepage/HowItWorksSection"),
     OneAppSection: () => import("@/components/modules/homepage/OneAppSection"),
-    QandASection: () => import("@/components/modules/homepage/QandASection")
+    QandASection: () => import("@/components/modules/homepage/QandASection"),
+    OurPartnersSection: () => import("@/components/modules/homepage/OurPartnersSection")
   },
   data() {
     return {
@@ -189,6 +190,23 @@ export default {
               {
                 question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION8"),
                 answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER8")
+              }
+            ]
+          }
+        },
+        {
+          id: 7,
+          component: "OurPartnersSection",
+          data: {
+            title: this.$t("HOMEPAGE.OUR_PARTNERS_SECTION.TITLE"),
+            images: [
+              {
+                url: "cyper-me-logo.png",
+                alt: ""
+              },
+              {
+                url: "misk-accelerator-logo.png",
+                alt: ""
               }
             ]
           }
