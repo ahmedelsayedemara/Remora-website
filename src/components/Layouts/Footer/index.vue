@@ -31,7 +31,7 @@
       </b-col>
       <b-col lg="8">
         <b-row>
-          <b-col lg="3" md="6" class="footer__links my-lg-0 my-sm-4">
+          <b-col lg="3" md="6" class="footer__links my-lg-0 my-4">
             <h6 class="fs-18">{{ $t("MENU.PLATFORM") }}</h6>
             <div class="footer__links-container">
               <router-link class="fs-16" to="#">{{ $t("MENU.OVERVIEW") }}</router-link>
@@ -39,7 +39,7 @@
               <router-link class="fs-16" to="#">{{ $t("MENU.SUPPORTED_EXCHANGES") }}</router-link>
             </div>
           </b-col>
-          <b-col lg="3" md="6" class="footer__links my-lg-0 my-sm-4">
+          <b-col lg="3" md="6" class="footer__links my-lg-0 my-4">
             <h6 class="fs-18">{{ $t("MENU.EDUCATION") }}</h6>
             <div class="footer__links-container">
               <router-link class="fs-16" to="#">{{ $t("MENU.GETTING_STARTED") }}</router-link>
@@ -49,7 +49,7 @@
               }}</router-link>
             </div>
           </b-col>
-          <b-col lg="3" md="6" class="footer__links my-lg-0 my-sm-4">
+          <b-col lg="3" md="6" class="footer__links my-lg-0 my-4">
             <h6 class="fs-18">{{ $t("MENU.COMPANY") }}</h6>
             <div class="footer__links-container">
               <router-link class="fs-16" to="#">{{ $t("MENU.ABOUT") }}</router-link>
@@ -57,7 +57,7 @@
               <router-link class="fs-16" to="/blog">{{ $t("MENU.BLOG") }}</router-link>
             </div>
           </b-col>
-          <b-col lg="3" md="6" class="footer__links my-lg-0 my-sm-4">
+          <b-col lg="3" md="6" class="footer__links my-lg-0 my-4">
             <h6 class="fs-18">{{ $t("MENU.CONTACT") }}</h6>
             <div class="footer__links-container">
               <router-link class="fs-16" to="#">{{ $t("MENU.FAQS") }}</router-link>
