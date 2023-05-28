@@ -1,9 +1,10 @@
 .header {
   padding: 1.125rem 0;
   box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05) !important;
+  position: relative;
 
   @media (max-width: 992px) {
-    padding-bottom: 0;
+    // padding-bottom: 0;
   }
 
   &__logo {
@@ -26,14 +27,18 @@
     ::v-deep {
       .navbar {
         @media (max-width: 992px) {
-          position: relative;
+          position: static;
+          padding-inline: 0;
+
           .navbar-collapse {
             position: absolute;
             z-index: 5;
             top: 96%;
             background: $color-white;
             border-radius: 0.3rem;
-            width: 10rem;
+            right: 0;
+            left: 0;
+            width: 100%;
             padding: 1rem 0;
             box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05);
 
@@ -43,8 +48,10 @@
             }
           }
         }
+
         .navbar-collapse {
           justify-content: center;
+
           .navbar-nav {
             .nav-item {
               .nav-link {
@@ -77,6 +84,7 @@
                 min-width: 14rem;
                 box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05);
                 border-radius: 0.5rem;
+
                 li {
                   margin: 0.5rem;
 
@@ -87,6 +95,7 @@
                     font-size: 0.875rem;
                     line-height: 1.5rem;
                     font-weight: 400;
+
                     &:hover,
                     &:active {
                       font-weight: 600;
@@ -98,6 +107,13 @@
               }
             }
           }
+        }
+
+        .navbar-toggler {
+          border: none;
+          padding: 0;
+          font-size: 24px;
+          color: $color-primary;
         }
       }
     }
@@ -115,4 +131,8 @@
       color: $color-primary;
     }
   }
+}
+
+.position-static {
+  position: static;
 }
