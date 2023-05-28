@@ -1,6 +1,29 @@
 .hero-section {
   .text-container {
     padding-top: 8rem;
+    padding-right: 13rem;
+
+    &:lang(en) {
+      padding-right: unset;
+      padding-left: 13rem;
+    }
+
+    @media (max-width: 1400px) {
+      padding-right: 9rem;
+      &:lang(en) {
+        padding-right: unset;
+        padding-left: 9rem;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      padding-right: 3rem;
+      &:lang(en) {
+        padding-right: unset;
+        padding-left: 3rem;
+      }
+    }
+
     h1 {
       color: $color-primary;
       font-weight: 700;
@@ -17,7 +40,7 @@
     img {
       width: 100%;
     }
-    .mask{
+    .mask {
       width: 150%;
       height: 8.5rem;
       position: absolute;
@@ -39,7 +62,7 @@
   .hero-section {
     .img-container {
       img {
-        width: 120%;
+        width: 100%;
       }
     }
   }
