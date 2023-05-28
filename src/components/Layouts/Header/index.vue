@@ -2,16 +2,13 @@
   <div class="header">
     <b-container>
       <b-row>
-        <b-col lg="3" md="6" sm="6" xs="6" class="header__logo">
+        <b-col xl="3" lg="3" md="2" sm="2" cols="2" class="header__logo px-0 px-lg-3">
           <div class="header__logo-container cursor-pointer" @click="handleRoute('/')">
-            <img src="@/assets/images/logo/logo.svg" alt="remora-logo" />
+            <img class="d-none d-lg-flex" src="@/assets/images/logo/logo.svg" alt="remora-logo" />
+            <img class="d-lg-none d-flex" src="@/assets/images/logo/logo-mobile.svg" alt="remora-logo" />
           </div>
         </b-col>
-        <b-col lg="3" md="6" sm="6" xs="6" class="header__actions--mobile">
-          <Button>{{ $t("MENU.TRADE_NOW") }}</Button>
-          <p class="fs-16 cursor-pointer" @click="changeLang">{{ getLangTitle }}</p>
-        </b-col>
-        <b-col lg="6">
+        <b-col xl="6" lg="6" md="2" sm="2" cols="2" class="px-0 px-lg-3 d-flex justify-content-lg-center justify-content-start">
           <div class="header__navbar">
             <b-navbar toggleable="lg" type="light">
               <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -35,7 +32,7 @@
             </b-navbar>
           </div>
         </b-col>
-        <b-col lg="3" class="header__actions">
+        <b-col xl="3" lg="3" md="8" sm="8" cols="8" class="header__actions">
           <Button>{{ $t("MENU.TRADE_NOW") }}</Button>
           <p class="fs-16 cursor-pointer" @click="changeLang">{{ getLangTitle }}</p>
         </b-col>
