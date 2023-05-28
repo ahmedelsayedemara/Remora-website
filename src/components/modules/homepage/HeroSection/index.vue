@@ -1,5 +1,6 @@
 <template>
-  <b-container class="hero-section">
+  <div class="hero-section">
+    <div class="container-fluid">
     <b-row>
       <b-col cols="12" lg="6" class="text-container">
         <h1 class="fs-56">{{ data.title }}</h1>
@@ -16,7 +17,8 @@
         <div class="mask d-none d-xl-block"></div>
       </b-col>
     </b-row>
-  </b-container>
+  </div>
+  </div>
 </template>
 
 <script>
