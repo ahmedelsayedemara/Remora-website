@@ -26,8 +26,22 @@
     ::v-deep {
       .navbar {
         @media (max-width: 992px) {
-          justify-content: flex-end;
-          padding: 1rem 0;
+          position: relative;
+          .navbar-collapse {
+            position: absolute;
+            z-index: 5;
+            top: 96%;
+            background: $color-white;
+            border-radius: 0.3rem;
+            width: 10rem;
+            padding: 1rem 0;
+            box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05);
+
+            li {
+              margin: 0;
+              padding: 0;
+            }
+          }
         }
         .navbar-collapse {
           justify-content: center;
@@ -99,32 +113,6 @@
       margin: 0;
       font-weight: 500;
       color: $color-primary;
-    }
-
-    @media (max-width: 992px) {
-      display: none;
-    }
-    @media (min-width: 992px) {
-      display: flex;
-    }
-
-    &--mobile {
-      justify-content: flex-end;
-      align-items: center;
-      gap: 0.5rem;
-
-      @media (max-width: 992px) {
-        display: flex;
-      }
-      @media (min-width: 992px) {
-        display: none;
-      }
-
-      p {
-        margin: 0;
-        font-weight: 500;
-        color: $color-primary;
-      }
     }
   }
 }
