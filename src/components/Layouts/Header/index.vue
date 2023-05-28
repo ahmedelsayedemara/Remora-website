@@ -5,13 +5,31 @@
         <b-col xl="3" lg="3" md="2" sm="2" cols="2" class="header__logo px-0 px-lg-3">
           <div class="header__logo-container cursor-pointer" @click="handleRoute('/')">
             <img class="d-none d-lg-flex" src="@/assets/images/logo/logo.svg" alt="remora-logo" />
-            <img class="d-lg-none d-flex" src="@/assets/images/logo/logo-mobile.svg" alt="remora-logo" />
+            <img
+              class="d-lg-none d-flex"
+              src="@/assets/images/logo/logo-mobile.svg"
+              alt="remora-logo"
+            />
           </div>
         </b-col>
-        <b-col xl="6" lg="6" md="2" sm="2" cols="2" class="px-0 px-lg-3 d-flex justify-content-lg-center justify-content-start">
+        <b-col
+          xl="6"
+          lg="6"
+          md="2"
+          sm="2"
+          cols="2"
+          class="px-0 px-lg-3 d-flex justify-content-lg-center justify-content-start position-static"
+        >
           <div class="header__navbar">
             <b-navbar toggleable="lg" type="light">
-              <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+              <b-navbar-toggle target="nav-collapse">
+                <template #default="{ expanded }">
+                  <b-icon v-if="expanded" icon="x"></b-icon>
+                  <b-icon v-else icon="justify"></b-icon>
+                </template>
+              </b-navbar-toggle>
+
+              <!-- <b-navbar-toggle target="nav-collapse"></b-navbar-toggle> -->
 
               <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav>
