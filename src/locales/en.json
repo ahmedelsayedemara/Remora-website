@@ -102,6 +102,22 @@
     "YOU_MAY_ALSO_LIKE": "You may also like",
     "TOP_ARTICLES": "Top Articles for this month"
   },
+  "LEADERS": {
+    "LEADER_BENEFIT_SECTION_TITLE": "Benefits of being a leader",
+    "LEADER_BENEFIT_SECTION_SUBTITLE": "We are facilitating making additional profits from your crypto trading expertise.",
+    "CARD_ONE_TITLE": "Early Access to GCC Market.",
+    "CARD_ONE_SUBTITLE": "Remora gives you a chance to learn the ins and outs of all GCC markets, allowing you to diversify your portfolio and boost your expertise.",
+    "CARD_TWO_TITLE": "Success Fee All Yours",
+    "CARD_TWO_SUBTITLE": "You're welcome to join Remora, and become one of our top crypto leaders with no fees during the beta period.",
+    "CARD_THREE_TITLE": "Keep close to Your Audience.",
+    "CARD_THREE_SUBTITLE": "Remora gives you and your followers the space to get exclusive market insights, share your trading success and engage in a collaborative crypto community.",
+    "CARD_FOUR_TITLE": "Prime Members Access",
+    "CARD_FOUR_SUBTITLE": "Remora offers FREE access to the platform and all its prime features for prime customers.",
+    "CARD_FIVE_TITLE": "Let the Numbers Talk",
+    "CARD_FIVE_SUBTITLE": "Remora shows your trading statistics, win-rate percentage, followers number, and performance indicators to attract more traders to your profile.",
+    "CARD_SIX_TITLE": "Be a Part of a Community",
+    "CARD_SIX_SUBTITLE": "A home Equips you with fresh market insights, shows your outstanding performance, and lets you connect with other crypto Investors."
+  },
   "GLOBAL": {
     "NO_MATCHING": "No Data",
     "SHOW_MORE": "Show more",
