@@ -3,16 +3,19 @@
     <DefaultLayout>
       <HeroSection :data="heroSectionData" />
       <LeaderBenefits :data="benefitsData" />
+      <LeaderFeatures :data="featuresData" />
     </DefaultLayout>
   </div>
 </template>
 <script>
 import HeroSection from "@/components/modules/homepage/HeroSection/index.vue"
 import LeaderBenefits from "@/components/modules/leaders/LeaderBenefits/index .vue"
+import LeaderFeatures from "@/components/modules/leaders/LeaderFeatures/index .vue"
 export default {
   components: {
     HeroSection,
-    LeaderBenefits
+    LeaderBenefits,
+    LeaderFeatures
   },
   data() {
     return {
@@ -59,6 +62,27 @@ export default {
             icon: 'leaders-community.svg',
             title: this.$t("LEADERS.CARD_SIX_TITLE"),
             subtitle: this.$t("LEADERS.CARD_SIX_SUBTITLE")
+          },
+        ]
+      },
+      featuresData: {
+        title: this.$t("LEADERS.LEADER_FEATURES_SECTION_TITLE"),
+        subtitle: this.$t("LEADERS.LEADER_FEATURES_SECTION_SUBTITLE"),
+        features: [
+          {
+            icon: 'leader-support.svg',
+            title: this.$t("LEADERS.FEATURES_CARD_ONE_TITLE"),
+            subtitle: this.$t("LEADERS.FEATURES_CARD_ONE_SUBTITLE")
+          },
+          {
+            icon: 'leader-analytics.svg',
+            title: this.$t("LEADERS.FEATURES_CARD_TWO_TITLE"),
+            subtitle: this.$t("LEADERS.FEATURES_CARD_TWO_SUBTITLE")
+          },
+          {
+            icon: 'leader-trusted.svg',
+            title: this.$t("LEADERS.FEATURES_CARD_THREE_TITLE"),
+            subtitle: this.$t("LEADERS.FEATURES_CARD_THREE_SUBTITLE")
           },
         ]
       }
