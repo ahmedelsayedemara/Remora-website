@@ -6,6 +6,8 @@
       <TopLeaders />
       <ImagePolygonWrapper />
       <LeaderFeatures :data="featuresData" />
+      <ShareYourTrades/>
+      <QandASection :data="QandA.data" />
     </DefaultLayout>
   </div>
 </template>
@@ -15,13 +17,19 @@ import LeaderBenefits from "@/components/modules/leaders/LeaderBenefits/index.vu
 import LeaderFeatures from "@/components/modules/leaders/LeaderFeatures/index.vue"
 import TopLeaders from "@/components/modules/leaders/TopLeaders/index.vue"
 import ImagePolygonWrapper from "@/components/Shared/ImagePolygonWrapper/index.vue"
+import ShareYourTrades from "@/components/modules/leaders/ShareYourTrades/index .vue"
+import QandASection from "@/components/modules/homepage/QandASection/index.vue"
+
 export default {
   components: {
     HeroSection,
     LeaderBenefits,
     LeaderFeatures,
     TopLeaders,
-    ImagePolygonWrapper
+    ImagePolygonWrapper,
+    ShareYourTrades,
+    QandASection,
+
   },
   data() {
     return {
@@ -91,7 +99,49 @@ export default {
             subtitle: this.$t("LEADERS.FEATURES_CARD_THREE_SUBTITLE")
           }
         ]
-      }
+      },
+      QandA:{
+          id: 6,
+          component: "QandASection",
+          data: {
+            title: this.$t("HOMEPAGE.Q_AND_A_SECTION.TITLE"),
+            text: this.$t("HOMEPAGE.Q_AND_A_SECTION.TEXT"),
+            questions: [
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION1"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER1")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION2"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER2")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION3"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER3")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION4"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER4")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION5"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER5")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION6"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER6")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION7"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER7")
+              },
+              {
+                question: this.$t("HOMEPAGE.Q_AND_A_SECTION.QUESTION8"),
+                answer: this.$t("HOMEPAGE.Q_AND_A_SECTION.ANSWER8")
+              }
+            ]
+          }
+        },
     }
   }
 }

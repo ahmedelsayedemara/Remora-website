@@ -125,7 +125,9 @@
     "FEATURES_CARD_TWO_SUBTITLE": "رسوم بيانية متقدمة لتتبع أدائك وتنبيهات الأسعار وأدوات التداول الاحترافية ، بالإضافة إلى توفير تحديثات يومية مجانية للأسواق وإشارات التداول",
     "FEATURES_CARD_THREE_TITLE": "موثوقة ومضمونة",
     "FEATURES_CARD_THREE_SUBTITLE": "ترخيص Remora معلق ، انضم إلى إطلاق BETA لمساعدتنا في جعل الإطلاق الرسمي أكثر خصوصية.",
-    "REMORA_TOP_LEADERS": "كبار قادة Remora"
+    "REMORA_TOP_LEADERS": "كبار قادة Remora",
+    "SHARE_YOUR_TRADE": "شارك صفقاتك <br/> واستراتيجياتك مع ملايين المستخدمين",
+    "CALL_TO_ACTION":"دعوة للعمل"
   },
   "GLOBAL": {
     "NO_MATCHING": "لا يوجد بيانات",

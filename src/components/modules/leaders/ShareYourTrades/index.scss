@@ -1,0 +1,27 @@
+.share-your-trades {
+  background-image: url(~@/assets/images/leaders-share-trades.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  height: 50vw;
+  width: 100%;
+
+  .text-container {
+    h1 {
+      color: $color-text-primary;
+      font-weight: 700;
+      line-height: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+  height: 100vw;
+    .text-container{
+      padding-top: 1rem;
+      h1{
+        font-size: 1.875rem !important;
+        line-height: 3rem !important;
+      }
+    }
+  }
+}
