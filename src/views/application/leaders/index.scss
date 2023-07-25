@@ -1,0 +1,16 @@
+.leaders {
+  ::v-deep .qa-section {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    .toggle-btn {
+      background-color: $color-cool-grey-section !important;
+      padding: 1.25rem 2.5rem !important;
+      &.collapsed {
+        border-radius: 8px !important;
+      }
+      &.not-collapsed {
+        border-radius: 8px 8px 0 0 !important;
+      }
+    }
+  }
+}
