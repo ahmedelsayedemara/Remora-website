@@ -10,7 +10,6 @@
             :busy="loading"
             :fields="fields"
             responsive
-            :sticky-header="true"
             show-empty
             :tbody-transition-props="transProps"
           >
@@ -22,16 +21,34 @@
 
             <template #empty>
               <div class="text-center p-4">
-                {{ $t("GLOBAL.NO_DATA") }}
+                {{ $t("GLOBAL.NO_MATCHING") }}
               </div>
             </template>
-            <template #cell(account)="data">
+            <template #cell(trader)="data">
               <div>
                 <div class="table-profile">
-                  <img :src="data.item.profile_img" />
-                  <p>{{ data.item.account }}</p>
+                  <ImagePolygonWrapper :defaultImage="data.item.profile_img" />
+                  <div class="name-time">
+                    <p class="fs-14">{{ data.item.trader }}</p>
+                    <p class="fs-12">{{ data.item.active }}</p>
+                  </div>
                 </div>
               </div>
+            </template>
+            <template #cell(roi)="data">
+              <span v-if="data.item.isROIup" class="up">{{ data.item.roi }}%</span>
+              <span v-else class="down">{{ data.item.roi }}%</span>
+            </template>
+            <template #cell(total_pnl)="data">
+              <span v-if="data.item.isTotalPNLup" class="up">{{ data.item.total_pnl }}%</span>
+              <span v-else class="down">{{ data.item.total_pnl }}%</span>
+            </template>
+            <template #cell(isPerformanceUp)="data">
+              <img
+                v-if="data.item.isPerformanceUp"
+                src="@/assets/images/leaders-performance-up.svg"
+              />
+              <img v-else src="@/assets/images/leaders-performance-down.svg" />
             </template>
           </b-table>
         </div>
@@ -40,7 +57,11 @@
   </b-container-fluid>
 </template>
 <script>
+import ImagePolygonWrapper from "@/components/Shared/ImagePolygonWrapper/index.vue"
 export default {
+  components: {
+    ImagePolygonWrapper
+  },
   data() {
     return {
       transProps: {
@@ -49,56 +70,114 @@ export default {
       loading: false,
       fields: [
         {
-          key: "account",
+          key: "trader",
           label: this.$t("Trader"),
           sortable: false
         },
         {
-          key: "area",
+          key: "followers",
           label: this.$t("Followers"),
-          sortable: false
+          sortable: true
         },
         {
-          key: "join_date",
+          key: "roi",
           label: this.$t("ROI"),
-          sortable: false
+          sortable: true
         },
         {
-          key: "done_requests",
+          key: "total_pnl",
           label: this.$t("Total PNL"),
-          sortable: false
+          sortable: true
         },
         {
-          key: "now_requests",
+          key: "aum",
           label: this.$t("AUM"),
-          sortable: false
+          sortable: true
         },
         {
-          key: "profits",
+          key: "isPerformanceUp",
           label: this.$t("Performance 1W"),
-          sortable: false
+          sortable: true
         }
       ],
       leaders: [
         {
           id: 1,
-          account: "Amer",
-          area: "test test",
-          join_date: "3test",
-          done_requests: "16 الف",
-          now_requests: "3الاف",
-          profits: "248"
-          // profile_img: require('@/assets/images/icons/avatar.svg')
+          trader: this.$t("LEADERS.TRADER_NAME"),
+          followers: "213",
+          roi: "23.06",
+          total_pnl: "1145.8",
+          aum: "$47589.13",
+          profile_img: require("@/assets/images/leaders-trader-one.svg"),
+          active: this.$t("LEADERS.ACTIVE_FROM"),
+          isROIup: true,
+          isTotalPNLup: true,
+          isPerformanceUp: true
         },
         {
           id: 1,
-          account: "Amer",
-          area: "test test",
-          join_date: "3test",
-          done_requests: "16 الف",
-          now_requests: "3الاف",
-          profits: "248"
-          // profile_img: require('@/assets/images/icons/avatar.svg')
+          trader: this.$t("LEADERS.TRADER_NAME"),
+          followers: "213",
+          roi: "23.06",
+          total_pnl: "1145.8",
+          aum: "$47589.13",
+          profile_img: require("@/assets/images/leaders-trader-two.svg"),
+          active: this.$t("LEADERS.ACTIVE_FROM"),
+          isROIup: false,
+          isTotalPNLup: false,
+          isPerformanceUp: false
+        },
+        {
+          id: 1,
+          trader: this.$t("LEADERS.TRADER_NAME"),
+          followers: "213",
+          roi: "23.06",
+          total_pnl: "1145.8",
+          aum: "$47589.13",
+          profile_img: require("@/assets/images/leaders-trader-three.svg"),
+          active: this.$t("LEADERS.ACTIVE_FROM"),
+          isROIup: true,
+          isTotalPNLup: true,
+          isPerformanceUp: true
+        },
+        {
+          id: 1,
+          trader: this.$t("LEADERS.TRADER_NAME"),
+          followers: "213",
+          roi: "23.06",
+          total_pnl: "1145.8",
+          aum: "$47589.13",
+          profile_img: require("@/assets/images/leaders-trader-four.svg"),
+          active: this.$t("LEADERS.ACTIVE_FROM"),
+          isROIup: true,
+          isTotalPNLup: true,
+          isPerformanceUp: true
+        },
+        {
+          id: 1,
+          trader: this.$t("LEADERS.TRADER_NAME"),
+          followers: "213",
+          roi: "23.06",
+          total_pnl: "1145.8",
+          aum: "$47589.13",
+          profile_img: require("@/assets/images/leaders-trader-five.svg"),
+          active: this.$t("LEADERS.ACTIVE_FROM"),
+          isROIup: true,
+          isTotalPNLup: true,
+          isPerformanceUp: true
+        },
+        {
+          id: 1,
+          trader: this.$t("LEADERS.TRADER_NAME"),
+          followers: "213",
+          roi: "23.06",
+          total_pnl: "1145.8",
+          aum: "$47589.13",
+          profile_img: require("@/assets/images/leaders-trader-six.svg"),
+          active: this.$t("LEADERS.ACTIVE_FROM"),
+          isROIup: false,
+          isTotalPNLup: false,
+          isPerformanceUp: false
         }
       ]
     }

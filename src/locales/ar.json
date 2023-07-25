@@ -127,7 +127,9 @@
     "FEATURES_CARD_THREE_SUBTITLE": "ترخيص Remora معلق ، انضم إلى إطلاق BETA لمساعدتنا في جعل الإطلاق الرسمي أكثر خصوصية.",
     "REMORA_TOP_LEADERS": "كبار قادة Remora",
     "SHARE_YOUR_TRADE": "شارك صفقاتك <br/> واستراتيجياتك مع ملايين المستخدمين",
-    "CALL_TO_ACTION":"دعوة للعمل"
+    "CALL_TO_ACTION":"دعوة للعمل",
+    "ACTIVE_FROM": "نشط منذ 5 دقائق",
+    "TRADER_NAME": "خالد عابد"
   },
   "GLOBAL": {
     "NO_MATCHING": "لا يوجد بيانات",

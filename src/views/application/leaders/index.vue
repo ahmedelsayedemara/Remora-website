@@ -4,7 +4,6 @@
       <HeroSection :data="heroSectionData" />
       <LeaderBenefits :data="benefitsData" />
       <TopLeaders />
-      <ImagePolygonWrapper />
       <LeaderFeatures :data="featuresData" />
       <ShareYourTrades/>
       <QandASection :data="QandA.data" />
@@ -16,7 +15,6 @@ import HeroSection from "@/components/modules/homepage/HeroSection/index.vue"
 import LeaderBenefits from "@/components/modules/leaders/LeaderBenefits/index.vue"
 import LeaderFeatures from "@/components/modules/leaders/LeaderFeatures/index.vue"
 import TopLeaders from "@/components/modules/leaders/TopLeaders/index.vue"
-import ImagePolygonWrapper from "@/components/Shared/ImagePolygonWrapper/index.vue"
 import ShareYourTrades from "@/components/modules/leaders/ShareYourTrades/index .vue"
 import QandASection from "@/components/modules/homepage/QandASection/index.vue"
 
@@ -26,7 +24,6 @@ export default {
     LeaderBenefits,
     LeaderFeatures,
     TopLeaders,
-    ImagePolygonWrapper,
     ShareYourTrades,
     QandASection,
 

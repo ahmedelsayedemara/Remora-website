@@ -17,8 +17,54 @@
 
   &__card {
     border-radius: 24px;
-border: 1px solid $color-border;
-background: $color-primary;
-padding: 2.5rem;
+    border: 1px solid $color-border;
+    background: $color-primary;
+    padding: 2.5rem;
   }
+}
+
+
+//table
+
+.table-profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+
+  .name-time {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.3rem;
+    p {
+      margin-bottom: 0;
+
+      &:first-of-type {
+        font-weight: 600;
+        letter-spacing: -0.28px;
+      }
+
+      &:last-of-type {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.up {
+    color: $color-up;
+
+    &::before {
+        content: "+";
+    }
+}
+
+.down {
+    color: $color-down;
+
+    &::before {
+        content: "-";
+    }
 }

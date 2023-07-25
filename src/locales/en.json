@@ -127,7 +127,9 @@
     "FEATURES_CARD_THREE_SUBTITLE": "Remora license is pending, Join BETA launch to help us make official launch more special.",
     "REMORA_TOP_LEADERS": "Remora top leaders",
     "SHARE_YOUR_TRADE": "Share your trades and <br/> strategies with million of users",
-    "CALL_TO_ACTION": "Call to action"
+    "CALL_TO_ACTION": "Call to action",
+    "ACTIVE_FROM": "Active 5 min ago",
+    "TRADER_NAME": "Khaled Abed"
   },
   "GLOBAL": {
     "NO_MATCHING": "No Data",
