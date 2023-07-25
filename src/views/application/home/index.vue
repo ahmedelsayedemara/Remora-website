@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Loading :loading="loading" />
     <DefaultLayout>
       <component
         v-for="(section, index) in sections"
@@ -27,6 +28,7 @@ export default {
   },
   data() {
     return {
+      loading: false,
       sections: [
         {
           id: 1,
@@ -267,6 +269,12 @@ export default {
         }
       ]
     }
+  },
+  mounted() {
+    this.loading = true
+    setTimeout(() => {
+      this.loading = false
+    }, 2400)
   }
 }
 </script>
