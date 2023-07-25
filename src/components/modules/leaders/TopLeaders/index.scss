@@ -1,0 +1,70 @@
+.top-leaders {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center, 50%, 50%;
+  background-image: url("~@/assets/images/leaders-top-bg.svg");
+  width: 100%;
+  height: 100%;
+  padding: 4.875rem 0 7.25rem 0;
+
+  h3 {
+    font-weight: 700;
+    text-align: center;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+    color: $color-white;
+  }
+
+  &__card {
+    border-radius: 24px;
+    border: 1px solid $color-border;
+    background: $color-primary;
+    padding: 2.5rem;
+  }
+}
+
+
+//table
+
+.table-profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+
+  .name-time {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.3rem;
+    p {
+      margin-bottom: 0;
+
+      &:first-of-type {
+        font-weight: 600;
+        letter-spacing: -0.28px;
+      }
+
+      &:last-of-type {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.up {
+    color: $color-up;
+
+    &::before {
+        content: "+";
+    }
+}
+
+.down {
+    color: $color-down;
+
+    &::before {
+        content: "-";
+    }
+}

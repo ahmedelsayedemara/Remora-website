@@ -21,3 +21,72 @@ body {
 .cursor-pointer {
   cursor: pointer;
 }
+
+.custom-table {
+  table {
+    border-spacing: 0px 8px;
+    border-collapse: separate;
+
+    th {
+      font-weight: 600;
+      font-size: 12px;
+      color: $color-white !important;
+      border: 0 !important;
+      background-color: transparent !important;
+      background: none !important;
+    }
+
+    thead {
+      tr {
+        background: none !important;
+      }
+    }
+    tr {
+      border-radius: 6px;
+      background: linear-gradient(25deg, #713ba8 0%, #41166b 100%);
+
+      &:lang(en) {
+        background: linear-gradient(25deg, #41166b 0%, #713ba8 100%);
+      }
+    }
+
+    td {
+      color: $color-white !important;
+      vertical-align: middle;
+      border-top: 0;
+      min-width: 100px;
+      font-size: 0.9rem;
+
+      &:last-of-type {
+        border-radius: 6px 0 0 6px;
+      }
+
+      &:first-of-type {
+        border-radius: 0 6px 6px 0;
+      }
+
+      &:lang(en) {
+        &:last-of-type {
+          border-radius: 0 6px 6px 0;
+        }
+
+        &:first-of-type {
+          border-radius: 6px 0 0 6px;
+        }
+      }
+    }
+  }
+
+  .table.b-table > thead > tr > [aria-sort]:not(.b-table-sort-icon-left),
+  .table.b-table > tfoot > tr > [aria-sort]:not(.b-table-sort-icon-left) {
+    background-position: left calc(0.75rem / 2) center;
+    padding-left: calc(0.75rem + 0.65em);
+  }
+
+  &:lang(ar) {
+    .table.b-table > thead > tr > [aria-sort]:not(.b-table-sort-icon-left),
+    .table.b-table > tfoot > tr > [aria-sort]:not(.b-table-sort-icon-left) {
+      background-position: right calc(0.75rem / 2) center;
+    }
+  }
+}
