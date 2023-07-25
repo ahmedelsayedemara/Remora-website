@@ -72,7 +72,7 @@ export default {
             },
             {
               value: this.$t("MENU.LEADERS"),
-              path: "/leaders"
+              path: "#"
             },
             {
               value: this.$t("MENU.SUPPORTED_EXCHANGES"),
