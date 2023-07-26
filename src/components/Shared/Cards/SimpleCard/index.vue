@@ -1,10 +1,5 @@
 <template>
-  <div
-    class="simple-card"
-    :class="{
-      hovered: hovered
-    }"
-  >
+  <div class="simple-card">
     <div class="text-center mb-4 pb-1">
       <img :src="require(`@/assets/images/${card.img.url}`)" :alt="card.img.alt" />
     </div>
