@@ -1,5 +1,6 @@
 <template>
-  <b-container class="our-partners my-5 pt-5 pb-4 px-0 px-md-5">
+  <div class="partner">
+  <b-container class="our-partners mt-5 py-5 px-0 px-md-5">
     <b-row class="mb-5">
       <b-col>
         <h3 class="fs-32 fw-700 text-center">
@@ -22,6 +23,7 @@
       </b-col>
     </b-row>
   </b-container>
+</div>
 </template>
 
 <script>

@@ -19,6 +19,11 @@ const publicRoutes = [
     name: "leaders",
     component: () => import("../views/application/leaders/index.vue")
   },
+  { 
+    path:"/about",
+    name: "about",
+    component: () => import("../views/application/about/index.vue")
+  },
   ]
 
 export const publicRoutesPaths = publicRoutes.map((route) => route.path)

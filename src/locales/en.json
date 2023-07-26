@@ -131,6 +131,27 @@
     "ACTIVE_FROM": "Active 5 min ago",
     "TRADER_NAME": "Khaled Abed"
   },
+  "ABOUT": {
+    "HEADER_TEXT": "A Game-changing community of like-minded crypto investors and traders — a place to trade the global financial markets, invest in digital currencies, and automatically replicate top-performing traders you believe in.",
+    "KNOW_REMORA": "Get to Know Remora",
+    "KNOW_REMORA_SUBTITLE": "The all-in-one platform for people fascinated by cryptocurrency trade",
+    "OUR_VISION": "Our vision",
+    "OUR_MISSION": "Our mission",
+    "MISSION": "To create a synergized community of investors and crypto traders that cater to the needs of crypto trading and DeFi.  making short-, mid-, and long-term investment options accessible to everyone.",
+    "VISION": "Building MENA's leading, collaborative crypto community, encouraging traders and investors to interact, learn, and even make new friends in the crypto world.",
+    "FOLLOWER_TO_LEADER_HEADER": "From a follower to a Trusted Leader",
+    "FOLLOWER_TO_LEADER_SUBTITLE": "Remora not only allows exceptional junior traders to stand out but also rewards them with many opportunities and educational materials, qualifying them as the next-gen crypto leaders who can gain additional income and break the barriers with remora.",
+    "FOLLOWER_ITEM_ONE_TEXT": "Join a community of top-qualified and professional crypto investors.",
+    "FOLLOWER_ITEM_TWO_TEXT": "Access plain crypto trading educational materials",
+    "JOIN_REMORA": "Join Remora",
+    "RANDOM_STATISTICS": "Random statistics",
+    "MEET_TEAM": "Meet the Team",
+    "MEET_TEAM_SUBTITLE": "Get to know the ones who chart MENA's top collaborative crypto community.",
+    "TALAL": "Talal Alsaleh",
+    "JOB_TITLE_T": "Co-founder & CEO",
+    "HAMAD": "Hamad Alshahrani",
+    "JOB_TITLE_H": "Co-founder & CTO"
+  },
   "GLOBAL": {
     "NO_MATCHING": "No Data",
     "SHOW_MORE": "Show more",

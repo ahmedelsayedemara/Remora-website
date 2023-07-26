@@ -102,7 +102,7 @@ export default {
           subItems: [
             {
               value: this.$t("MENU.ABOUT"),
-              path: "#"
+              path: "/about"
             },
             {
               value: this.$t("MENU.TEAM"),
