@@ -12,20 +12,17 @@
           <p class="fs-16">{{ $t("FOOTER.REMORA_LOCATION") }}</p>
         </div>
         <div class="footer__social">
-          <a href="#" target="_blank">
+          <a href="https://www.facebook.com/profile.php?id=100086636334073" target="_blank">
             <img src="@/assets/images/footer-facebook.svg" />
           </a>
-          <a href="#" target="_blank">
+          <a href="https://twitter.com/remora_social" target="_blank">
             <img src="@/assets/images/footer-twitter.svg" />
           </a>
-          <a href="#" target="_blank">
+          <a href="https://www.instagram.com/remoraworld" target="_blank">
             <img src="@/assets/images/footer-instagram.svg" />
           </a>
-          <a href="#" target="_blank">
+          <a href="https://www.linkedin.com/company/remoraglobal" target="_blank">
             <img src="@/assets/images/footer-linkedin.svg" />
-          </a>
-          <a href="#" target="_blank">
-            <img src="@/assets/images/footer-youtube.svg" />
           </a>
         </div>
       </b-col>
@@ -69,11 +66,20 @@
     </b-row>
     <div class="footer__copy-rights fs-14">
       {{ $t("FOOTER.COPY_RIGHTS") }}
+      {{ getDateFormat(new Date(), "YYYY") }}
     </div>
   </div>
 </template>
 <script>
-export default {}
+import { getDateFormat } from "@/helpers"
+
+export default {
+  data() {
+    return {
+      getDateFormat
+    }
+  }
+}
 </script>
 <style lang="scss" scoped>
 @import "./index.scss";

@@ -51,7 +51,7 @@
           </div>
         </b-col>
         <b-col xl="3" lg="3" md="8" sm="8" cols="8" class="header__actions">
-          <Button>{{ $t("MENU.TRADE_NOW") }}</Button>
+          <!-- <Button>{{ $t("MENU.TRADE_NOW") }}</Button> -->
           <p class="fs-16 cursor-pointer" @click="changeLang">{{ getLangTitle }}</p>
         </b-col>
       </b-row>
