@@ -131,6 +131,22 @@
     "ACTIVE_FROM": "Active 5 min ago",
     "TRADER_NAME": "Khaled Abed"
   },
+  "CONTACT_US": {
+    "MESSAGE_SENT_SUCCESSFULLY": "Your message was sent successfully. Thank you!",
+    "CONTACT_US_HERO_SECTION_TITLE": "Got a question? <br/> We are always here to help!",
+    "CONTACT_US_HERO_SECTION_SUBTITLE": "Please don't hesitate to contact us for answers to anything you might be wondering",
+    "CONTACT_FORM": {
+      "TITLE": "Submit a request",
+      "CATEGORY_PLACEHOLDER": "Select a category",
+      "EMAIL_PLACEHOLDER": "Your email",
+      "FIRST_P": "Please, enter the email address where you wish to receive our answer. If you are a registered user of Remora, please include the email address you used when you registered if possible to help us locate your account as soon as possible",
+      "MESSAGE_PLACEHOLDER": "Write us a message",
+      "SECOND_P": "Please enter the details of your request and, if you have any questions regarding our Terms of Use, please include specific samples of the usage you wish to give our resouces. If you’re reporting a problem, make sure to include as much information as possible. Please include any screenshots or videos of issues since this will also help us resolve problems much sooner. Once your request is submitted, a member of our support staff will respond as soon as possible.",
+      "BTN": "Send Message",
+      "EMAIL": "Email",
+      "MESSAGE": "Message"
+    }
+  },
   "GLOBAL": {
     "NO_MATCHING": "No Data",
     "SHOW_MORE": "Show more",

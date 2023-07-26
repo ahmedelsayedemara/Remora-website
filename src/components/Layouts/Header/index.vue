@@ -4,12 +4,8 @@
       <b-row>
         <b-col xl="3" lg="3" md="2" sm="2" cols="2" class="header__logo px-0 px-lg-3">
           <div class="header__logo-container cursor-pointer" @click="handleRoute('/')">
-            <img class="d-none d-lg-flex" src="@/assets/images/logo/logo.svg" alt="remora-logo" />
-            <img
-              class="d-lg-none d-flex"
-              src="@/assets/images/logo/logo-mobile.svg"
-              alt="remora-logo"
-            />
+            <logo-svg class="d-none d-lg-flex" />
+            <logo-mobile class="d-lg-none d-flex" />
           </div>
         </b-col>
         <b-col
@@ -33,7 +29,15 @@
 
               <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav>
-                  <b-nav-item-dropdown
+                  <b-nav-item
+                    v-for="(item, idx) in menuItems"
+                    :key="idx"
+                    :text="item.value"
+                    @click="handleRoute(item.path)"
+                  >
+                    {{ item.value }}
+                  </b-nav-item>
+                  <!-- <b-nav-item-dropdown
                     v-for="(item, idx) in menuItems"
                     :key="idx"
                     :text="item.value"
@@ -44,7 +48,7 @@
                       @click="handleRoute(subItem.path)"
                       >{{ subItem.value }}</b-dropdown-item
                     >
-                  </b-nav-item-dropdown>
+                  </b-nav-item-dropdown> -->
                 </b-navbar-nav>
               </b-collapse>
             </b-navbar>
@@ -59,77 +63,84 @@
   </div>
 </template>
 <script>
+import LogoSvg from "@/components/svgs/LogoSvg.vue"
+import LogoMobile from "@/components/svgs/LogoMobile.vue"
 export default {
+  components: { LogoSvg, LogoMobile },
   data() {
     return {
       menuItems: [
         {
-          value: this.$t("MENU.PLATFORM"),
-          subItems: [
-            {
-              value: this.$t("MENU.OVERVIEW"),
-              path: "#"
-            },
-            {
-              value: this.$t("MENU.LEADERS"),
-              path: "/leaders"
-            },
-            {
-              value: this.$t("MENU.SUPPORTED_EXCHANGES"),
-              path: "#"
-            }
-          ]
+          value: this.$t("MENU.LEADERS"),
+          path: "/leaders"
+          // subItems: [
+          //   {
+          //     value: this.$t("MENU.OVERVIEW"),
+          //     path: "#"
+          //   },
+          //   {
+          //     value: this.$t("MENU.LEADERS"),
+          //     path: "/leaders"
+          //   },
+          //   {
+          //     value: this.$t("MENU.SUPPORTED_EXCHANGES"),
+          //     path: "#"
+          //   }
+          // ]
         },
         {
-          value: this.$t("MENU.EDUCATION"),
-          subItems: [
-            {
-              value: this.$t("MENU.GETTING_STARTED"),
-              path: "#"
-            },
-            {
-              value: this.$t("MENU.TRADING"),
-              path: "#"
-            },
-            {
-              value: this.$t("MENU.TRANSACTIONS_AND_PAYMENT"),
-              path: "#"
-            }
-          ]
+          value: this.$t("MENU.BLOG"),
+          path: "/blog"
+          // subItems: [
+          //   {
+          //     value: this.$t("MENU.GETTING_STARTED"),
+          //     path: "#"
+          //   },
+          //   {
+          //     value: this.$t("MENU.TRADING"),
+          //     path: "#"
+          //   },
+          //   {
+          //     value: this.$t("MENU.TRANSACTIONS_AND_PAYMENT"),
+          //     path: "#"
+          //   }
+          // ]
         },
         {
-          value: this.$t("MENU.COMPANY"),
-          subItems: [
-            {
-              value: this.$t("MENU.ABOUT"),
-              path: "#"
-            },
-            {
-              value: this.$t("MENU.TEAM"),
-              path: "#"
-            },
-            {
-              value: this.$t("MENU.BLOG"),
-              path: "/blog"
-            },
-            {
-              value: this.$t("MENU.CONTACT"),
-              path: "#"
-            }
-          ]
+          value: this.$t("MENU.ABOUT"),
+          path: "/about"
+          // subItems: [
+          //   {
+          //     value: this.$t("MENU.ABOUT"),
+          //     path: "#"
+          //   },
+          //   {
+          //     value: this.$t("MENU.TEAM"),
+          //     path: "#"
+          //   },
+          //   {
+          //     value: this.$t("MENU.BLOG"),
+          //     path: "/blog"
+          //   },
+          //   {
+          //     value: this.$t("MENU.CONTACT"),
+          //     path: "#"
+          //   }
+          // ]
         },
         {
           value: this.$t("MENU.CONTACT"),
-          subItems: [
-            {
-              value: this.$t("MENU.CONTACT_US"),
-              path: "#"
-            },
-            {
-              value: this.$t("MENU.FAQS"),
-              path: "#"
-            }
-          ]
+          path: "/contact-us"
+          // subItems: [
+          //   {
+          //     value: this.$t("MENU.CONTACT_US"),
+          //     path: "#"
+          //   },
+          //   {
+          //     value: this.$t("MENU.FAQS"),
+          //     path: "#"
+          //   }
+          // ]
         }
       ]
     }

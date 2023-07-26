@@ -1,0 +1,27 @@
+.contact-us-route {
+  :deep(.header) {
+    background-color: $color-primary;
+    li {
+      a:not(.dropdown-item) {
+        color: white !important;
+      }
+    }
+    svg.logo-svg {
+      .logo-text,
+      .logo-symbol {
+        fill: white !important;
+      }
+    }
+    svg.logo-mobile {
+      fill: white !important;
+    }
+    p {
+      color: white !important;
+    }
+    button {
+      svg {
+        fill: white !important;
+      }
+    }
+  }
+}

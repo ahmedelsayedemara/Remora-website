@@ -3,6 +3,7 @@
   background-image: none !important;
   min-height: 44px;
   border-radius: 6px;
+  border: 1px solid $color-input-border;
 
   &:focus {
     box-shadow: none;
@@ -10,17 +11,27 @@
   }
 
   &::placeholder {
-    // color: $color-light-gray;
+    color: $color-text-secondary;
+    font-size: 14px;
+  }
+
+  ::-webkit-input-placeholder {
+    color: $color-text-secondary;
+    font-size: 14px;
+  }
+
+  ::-moz-placeholder {
+    color: $color-text-secondary;
     font-size: 14px;
   }
 
   &:-ms-input-placeholder {
-    // color: $color-light-gray;
+    color: $color-text-secondary;
     font-size: 14px;
   }
 
   &::-ms-input-placeholder {
-    // color: $color-light-gray;
+    color: $color-text-secondary;
     font-size: 14px;
   }
 }

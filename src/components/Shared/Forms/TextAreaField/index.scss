@@ -1,9 +1,35 @@
 .form-control {
   background-color: white;
   background-image: none !important;
-
+  border: 1px solid $color-input-border;
+  border-radius: 6px;
+  
   &:focus {
     box-shadow: none;
     border-color: $color-primary;
+  }
+  &::placeholder {
+    color: $color-text-secondary;
+    font-size: 14px;
+  }
+
+  ::-webkit-input-placeholder {
+    color: $color-text-secondary;
+    font-size: 14px;
+  }
+
+  ::-moz-placeholder {
+    color: $color-text-secondary;
+    font-size: 14px;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color-text-secondary;
+    font-size: 14px;
+  }
+
+  &::-ms-input-placeholder {
+    color: $color-text-secondary;
+    font-size: 14px;
   }
 }

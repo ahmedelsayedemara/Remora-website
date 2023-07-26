@@ -1,0 +1,49 @@
+.contact-form {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  h3 {
+    font-weight: 700;
+    line-height: 3.5rem;
+    color: $color-primary;
+  }
+  p {
+    color: #000;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.25rem; /* 166.667% */
+  }
+  ::v-deep {
+    .vs__dropdown-toggle {
+      width: 100% !important;
+      min-height: 44px !important;
+      height: 44px !important;
+      .b-icon{
+        color: $color-input-border;
+      }
+      &::placeholder {
+        color: $color-text-secondary;
+        font-size: 14px;
+      }
+
+      ::-webkit-input-placeholder {
+        color: $color-text-secondary;
+        font-size: 14px;
+      }
+
+      ::-moz-placeholder {
+        color: $color-text-secondary;
+        font-size: 14px;
+      }
+
+      &:-ms-input-placeholder {
+        color: $color-text-secondary;
+        font-size: 14px;
+      }
+
+      &::-ms-input-placeholder {
+        color: $color-text-secondary;
+        font-size: 14px;
+      }
+    }
+  }
+}

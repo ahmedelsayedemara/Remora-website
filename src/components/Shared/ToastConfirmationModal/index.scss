@@ -1,0 +1,65 @@
+::v-deep {
+  .modal-header {
+    flex-direction: row-reverse;
+    border: 0;
+  }
+
+  .modal-content {
+    border-radius: 16px;
+  }
+
+  .min-w-118 {
+    min-width: 118px;
+  }
+}
+
+.close-modal-icon {
+  cursor: pointer;
+}
+
+.btn-confirm {
+  &:hover {
+    color: white;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  color: $color-text-primary;
+  margin-bottom: 14px;
+}
+
+.message {
+  font-weight: 400;
+  font-size: 16px;
+  color: $color-text-primary;
+  margin-bottom: 40px;
+  max-width: 532px;
+  margin-inline: auto;
+}
+
+.sub-message {
+  font-weight: 700;
+
+  &.danger {
+    color: $color-invalid;
+  }
+}
+
+.reomve-img {
+  margin-bottom: 35px;
+}
+
+.actions {
+  margin-bottom: 50px;
+}
+
+@media (min-width: 992px) {
+  ::v-deep {
+    .modal-lg,
+    .modal-xl {
+      max-width: 980px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.hero-section-container {
+  height: 433px;
+  background-image: url("~@/assets/images/contact-us-hero-section-background.svg");
+  background-size: cover;
+  margin-bottom: 4rem;
+  h1 {
+    color: #fff;
+    font-weight: 700;
+    line-height: 3.5rem;
+  }
+  p {
+    color: #fff;
+    font-weight: 400;
+    line-height: 3.5rem;
+  }
+}

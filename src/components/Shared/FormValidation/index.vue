@@ -4,7 +4,7 @@
       v-if="showErrors"
       class="mb-3"
     >
-      <Alert :messages="errors" />
+      <!-- <Alert :messages="errors" /> -->
     </div>
     <ValidationObserver
       ref="observer"
@@ -32,12 +32,12 @@ export default {
   methods: {
     async onSubmit() {
       const isValid = await this.$refs.observer.validate()
-      const errors = await this.$refs.observer.errors
+      // const errors = await this.$refs.observer.errors
       if (!isValid) {
-        this.onInvalidSubmit(errors)
+        // this.onInvalidSubmit(errors)
         return
       }
-      this.handleResetForm()
+      // this.handleResetForm()
       this.$emit("handleSubmit")
     },
     async onInvalidSubmit(errors) {

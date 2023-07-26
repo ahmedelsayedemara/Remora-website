@@ -5,11 +5,11 @@
     :rules="rules"
   >
     <label v-if="label">{{ label }}</label>
-
     <b-form-select
       v-model="innerValue"
       :options="options"
       v-bind="$attrs"
+      class="form-control"
       :class="{
         'input-disabled': $attrs.disabled,
         'is-invalid': invalid & errors.length,

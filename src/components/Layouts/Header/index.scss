@@ -131,6 +131,20 @@
       color: $color-primary;
     }
   }
+
+  ::v-deep {
+    svg.logo-svg {
+      .logo-text {
+        fill: $color-text-primary;
+      }
+      .logo-symbol {
+        fill: $color-primary;
+      }
+    }
+    svg.logo-mobile {
+      fill: $color-primary;
+    }
+  }
 }
 
 .position-static {
