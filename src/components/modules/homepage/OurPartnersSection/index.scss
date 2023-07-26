@@ -1,8 +1,11 @@
+.partner {
+  background: $color-cool-grey-section;
+}
 .our-partners {
   overflow-x: hidden;
-    h3{
-        color: $color-text-primary;
-    }
+  h3 {
+    color: $color-text-primary;
+  }
   .with-border {
     border-inline-end: 2px solid $color-cool-grey-card;
   }

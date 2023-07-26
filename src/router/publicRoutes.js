@@ -1,30 +1,31 @@
 const publicRoutes = [
-  { 
-    path:"/",
+  {
+    path: "/",
     name: "home",
     component: () => import("../views/application/home/index.vue")
   },
-  { 
-    path:"/blog",
+  {
+    path: "/blog",
     name: "blog",
     component: () => import("../views/application/blog/list/index.vue")
   },
-  { 
-    path:"/blog-details/:id",
+  {
+    path: "/blog-details/:id",
     name: "blog-details",
     component: () => import("../views/application/blog/details/index.vue")
   },
-  { 
-    path:"/leaders",
+  {
+    path: "/leaders",
     name: "leaders",
     component: () => import("../views/application/leaders/index.vue")
   },
-  { 
-    path:"/contact-us",
+  {
+    path: "/contact-us",
     name: "contact-us",
     component: () => import("../views/application/contact-us/index.vue")
   },
-  ]
+  { path: "/about", name: "about", component: () => import("../views/application/about/index.vue") }
+]
 
 export const publicRoutesPaths = publicRoutes.map((route) => route.path)
 
