@@ -33,14 +33,14 @@
           </div>
         </b-col>
       </b-row>
-      <b-row class="justify-content-center mt-0 mt-md-5 pt-5 mb-1">
+      <!-- <b-row class="justify-content-center mt-0 mt-md-5 pt-5 mb-1">
         <Button variant="primary" customClass="d-flex align-items-center watch-video-btn">
           <img :src="require(`@/assets/images/${data.img.url}`)" :alt="data.img.alt" class="mx-1" />
           <span class="mx-1 fs-18 fw-500">
             {{ data.btnText }}
           </span>
         </Button>
-      </b-row>
+      </b-row> -->
     </b-container>
   </b-container>
 </template>
