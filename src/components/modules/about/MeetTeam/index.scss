@@ -1,0 +1,55 @@
+.team {
+  padding: 3.75rem 0 5.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h3 {
+    font-weight: 700;
+    line-height: 3.313rem;
+    color: $color-text-primary;
+  }
+
+  p {
+    color: $color-text-primary;
+    line-height: 1.75rem;
+    font-weight: 400;
+  }
+
+  &__members {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2.5rem;
+  }
+
+  &__card {
+    padding: 1.5rem 0;
+    width: 306px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 1rem;
+    text-align: center;
+
+    &:hover {
+      box-shadow: 12px 12px 80px -12px rgba(0, 0, 0, 0.10);
+
+    }
+
+    h4 {
+      font-weight: 700;
+      margin-top: 1rem;
+      line-height: 2rem;
+      margin-bottom: 0;
+      color: $color-text-primary;
+    }
+
+    p {
+      margin-bottom: 0;
+      line-height: 1.375rem;
+      font-weight: 400;
+      color: $color-text-primary;
+    }
+  }
+}

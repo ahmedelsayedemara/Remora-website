@@ -1,0 +1,30 @@
+.numbers {
+  padding: 4.375rem 0;
+  background: $color-cool-grey-section;
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    .count {
+      h6 {
+        margin-bottom: 0;
+        font-weight: 400;
+        color: $color-text-primary;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-weight: 400;
+        color: $color-text-secondary;
+      }
+    }
+  }
+}
