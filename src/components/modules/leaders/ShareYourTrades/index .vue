@@ -11,7 +11,9 @@
           </b-col>
         </b-row>
         <b-row class="justify-content-center mt-2">
-          <Button customClass="btn-secondary">{{ $t("LEADERS.CALL_TO_ACTION") }}</Button>
+          <Button customClass="btn-secondary" @click="goToJoinNow">{{
+            $t("LEADERS.CALL_TO_ACTION")
+          }}</Button>
         </b-row>
       </b-col>
     </b-row>
@@ -23,6 +25,16 @@ export default {
     data: {
       type: Object,
       default: () => {}
+    }
+  },
+  methods: {
+    goToJoinNow() {
+      this.$router.push({
+        path: "/",
+        query: {
+          section: "join-the-waitlist"
+        }
+      })
     }
   }
 }

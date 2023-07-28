@@ -1,33 +1,55 @@
 <template>
   <div>
     <DefaultLayout>
-      <component
-        v-for="(section, index) in sections"
-        :key="index"
-        :is="section.component"
-        :data="section.data"
-      ></component>
+      <PageLoader v-if="loading" />
+      <div v-else>
+        <component
+          v-for="(section, index) in sections"
+          :key="index"
+          :is="section.component"
+          :id="section.component"
+          :data="section.data"
+          @success="$bvModal.show('success-modal')"
+          @scrollToJoinNow="scrollToSection"
+        ></component>
+      </div>
     </DefaultLayout>
+    <ToastConfirmationModal
+      name="success-modal"
+      :title="$t('CONTACT_US.MESSAGE_SENT_SUCCESSFULLY')"
+    />
   </div>
 </template>
 
 <script>
 import { Questions } from "@/constants/Questions"
+import HeroSection from "@/components/modules/homepage/HeroSection"
+import BuiltOnSection from "@/components/modules/homepage/BuiltOnSection"
+import PowerSection from "@/components/modules/homepage/PowerSection"
+import HowItWorksSection from "@/components/modules/homepage/HowItWorksSection"
+import OneAppSection from "@/components/modules/homepage/OneAppSection"
+import QandASection from "@/components/modules/homepage/QandASection"
+import OurPartnersSection from "@/components/modules/homepage/OurPartnersSection"
+import JoinTheWaitListSection from "@/components/modules/homepage/JoinTheWaitListSection"
+import SharkSection from "@/components/modules/homepage/SharkSection"
+import ToastConfirmationModal from "@/components/Shared/ToastConfirmationModal"
 export default {
   name: "HomeComponent",
   components: {
-    HeroSection: () => import("@/components/modules/homepage/HeroSection"),
-    BuiltOnSection: () => import("@/components/modules/homepage/BuiltOnSection"),
-    PowerSection: () => import("@/components/modules/homepage/PowerSection"),
-    HowItWorksSection: () => import("@/components/modules/homepage/HowItWorksSection"),
-    OneAppSection: () => import("@/components/modules/homepage/OneAppSection"),
-    QandASection: () => import("@/components/modules/homepage/QandASection"),
-    OurPartnersSection: () => import("@/components/modules/homepage/OurPartnersSection"),
-    JoinTheWaitListSection: () => import("@/components/modules/homepage/JoinTheWaitListSection"),
-    SharkSection: () => import("@/components/modules/homepage/SharkSection")
+    HeroSection,
+    BuiltOnSection,
+    PowerSection,
+    HowItWorksSection,
+    OneAppSection,
+    QandASection,
+    OurPartnersSection,
+    JoinTheWaitListSection,
+    SharkSection,
+    ToastConfirmationModal
   },
   data() {
     return {
+      loading: true,
       sections: [
         {
           id: 1,
@@ -234,6 +256,26 @@ export default {
           }
         }
       ]
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false
+    }, 1500)
+  },
+  watch: {
+    "$route.query.section"() {
+      if (this.$route.query.section) {
+        this.$nextTick(() => {
+          this.scrollToSection()
+        })
+      }
+    }
+  },
+  methods: {
+    scrollToSection() {
+      const element = document.getElementById("JoinTheWaitListSection")
+      element.scrollIntoView({ behavior: "smooth", block: "center" })
     }
   }
 }

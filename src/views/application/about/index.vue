@@ -1,6 +1,8 @@
 <template>
   <DefaultLayout>
-    <div class="about">
+    <PageLoader v-if="loading" />
+
+    <div v-else class="about">
       <div class="about__header">
         <h3 class="fs-40">
           {{ $t("ABOUT.HEADER_TEXT") }}
@@ -31,6 +33,7 @@ export default {
   },
   data() {
     return {
+      loading: true,
       ourPartner: {
         title: this.$t("HOMEPAGE.OUR_PARTNERS_SECTION.TITLE"),
         images: [
@@ -45,6 +48,11 @@ export default {
         ]
       }
     }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false
+    }, 1500)
   },
   methods: {}
 }

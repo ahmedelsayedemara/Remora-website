@@ -1,9 +1,11 @@
 <template>
   <div class="blog">
     <DefaultLayout>
-      <div class="blog__header">
-        <h1 class="fs-48">{{ $t("BLOG.BLOG_TITLE") }}</h1>
-        <!-- <SelectSearch
+      <PageLoader v-if="loading" />
+      <div v-else>
+        <div class="blog__header">
+          <h1 class="fs-48">{{ $t("BLOG.BLOG_TITLE") }}</h1>
+          <!-- <SelectSearch
           v-model="formValues.categoryId"
           class="blog__select-box"
           :label="$t('BLOG.CHOOSE_CATEGORY')"
@@ -12,12 +14,12 @@
           :get-option-label="(option) => option.name"
           :options="categories"
         /> -->
-      </div>
-      <div class="blog__content">
-        <b-container>
-          <h3 class="fs-40">{{ $t("BLOG.NEWS_AND_ARTICLES") }}</h3>
-          <p class="fs-18">{{ $t("BLOG.SUBTITLE") }}</p>
-          <!-- <div class="blog__filter">
+        </div>
+        <div class="blog__content">
+          <b-container>
+            <h3 class="fs-40">{{ $t("BLOG.NEWS_AND_ARTICLES") }}</h3>
+            <p class="fs-18">{{ $t("BLOG.SUBTITLE") }}</p>
+            <!-- <div class="blog__filter">
             <div
               v-for="(item, idx) in filterItems"
               :key="idx"
@@ -26,20 +28,21 @@
               <span class="fs-12">{{ item.name }}</span>
             </div>
           </div> -->
-          <div class="blog__articles">
-            <b-row>
-              <b-col v-for="article in articleList" :key="article.id" lg="4">
-                <ArticleCard :article="article" @handleGetDetails="getArticleDetails" />
-              </b-col>
-              <!-- <b-col v-for="article in articleList" :key="article.id" lg="4">
+            <div class="blog__articles">
+              <b-row>
+                <b-col v-for="article in articleList" :key="article.id" lg="4">
+                  <ArticleCard :article="article" @handleGetDetails="getArticleDetails" />
+                </b-col>
+                <!-- <b-col v-for="article in articleList" :key="article.id" lg="4">
                 <ArticleCard :article="article" @handleGetDetails="getArticleDetails" />
               </b-col> -->
-            </b-row>
-          </div>
-          <!-- <div class="blog__pagination">
+              </b-row>
+            </div>
+            <!-- <div class="blog__pagination">
             <Pagination :totalItems="totalItemCount" :perPage="perPage" :currentPage="currentPage" />
           </div> -->
-        </b-container>
+          </b-container>
+        </div>
       </div>
     </DefaultLayout>
   </div>
@@ -55,6 +58,7 @@ export default {
   },
   data() {
     return {
+      loading: true,
       perPage: 9,
       currentPage: 1,
       totalItemCount: 1107,
@@ -558,6 +562,11 @@ export default {
         }
       ]
     }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false
+    }, 1500)
   },
   computed: {
     articleList() {

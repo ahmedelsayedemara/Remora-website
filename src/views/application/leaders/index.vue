@@ -1,12 +1,15 @@
 <template>
   <div class="leaders">
     <DefaultLayout>
-      <HeroSection :data="heroSectionData" />
-      <LeaderBenefits :data="benefitsData" />
-      <TopLeaders />
-      <LeaderFeatures :data="featuresData" />
-      <ShareYourTrades/>
-      <QandASection :data="QandA.data" />
+      <PageLoader v-if="loading" />
+      <div v-else>
+        <HeroSection :data="heroSectionData" />
+        <LeaderBenefits :data="benefitsData" />
+        <TopLeaders />
+        <LeaderFeatures :data="featuresData" />
+        <ShareYourTrades />
+        <QandASection :data="QandA.data" />
+      </div>
     </DefaultLayout>
   </div>
 </template>
@@ -26,11 +29,11 @@ export default {
     LeaderFeatures,
     TopLeaders,
     ShareYourTrades,
-    QandASection,
-
+    QandASection
   },
   data() {
     return {
+      loading: true,
       heroSectionData: {
         title: this.$t("HOMEPAGE.HERO_SECTION.TITLE"),
         text: this.$t("HOMEPAGE.HERO_SECTION.TEXT"),
@@ -98,17 +101,21 @@ export default {
           }
         ]
       },
-      QandA:{
-          id: 6,
-          component: "QandASection",
-          data: {
-            title: this.$t("HOMEPAGE.Q_AND_A_SECTION.TITLE"),
-            // text: this.$t("HOMEPAGE.Q_AND_A_SECTION.TEXT"),
-                     questions: Questions
-
-          }
-        },
+      QandA: {
+        id: 6,
+        component: "QandASection",
+        data: {
+          title: this.$t("HOMEPAGE.Q_AND_A_SECTION.TITLE"),
+          // text: this.$t("HOMEPAGE.Q_AND_A_SECTION.TEXT"),
+          questions: Questions
+        }
+      }
     }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false
+    }, 1500)
   }
 }
 </script>

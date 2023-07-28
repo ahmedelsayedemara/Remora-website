@@ -1,5 +1,5 @@
 import Vue from "vue"
-import { ValidationProvider, ValidationObserver } from "vee-validate";
+import { ValidationProvider, ValidationObserver } from "vee-validate"
 import TextField from "@/components/Shared/Forms/TextField/index.vue"
 import TextAreaField from "@/components/Shared/Forms/TextAreaField/index.vue"
 import SelectField from "@/components/Shared/Forms/SelectField/index.vue"
@@ -12,6 +12,7 @@ import Toast from "@/components/Shared/Toast/index.vue"
 import FormValidation from "@/components/Shared/FormValidation/index.vue"
 import DefaultLayout from "@/layouts/DefaultLayout/index.vue"
 import SimpleCard from "@/components/Shared/Cards/SimpleCard/index.vue"
+import PageLoader from "@/components/Shared/Loader/index.vue"
 
 const components = {
   ValidationProvider,
@@ -27,7 +28,8 @@ const components = {
   Toast,
   FormValidation,
   DefaultLayout,
-  SimpleCard
+  SimpleCard,
+  PageLoader
 }
 
 Object.entries(components).forEach(([name, component]) => {

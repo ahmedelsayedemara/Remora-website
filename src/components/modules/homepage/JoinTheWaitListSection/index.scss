@@ -15,8 +15,12 @@
   label {
     color: $color-text-secondary;
 
-    &.checkbox-label {
-      color: $color-text-primary;
+    ::v-deep {
+      .checkbox-label {
+        label {
+          color: $color-text-primary;
+        }
+      }
     }
   }
 
@@ -48,7 +52,6 @@
     }
 
     @media screen and (max-width: 1200px) {
-
       &::before,
       &::after {
         display: none;

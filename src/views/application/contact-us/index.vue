@@ -1,8 +1,11 @@
 <template>
   <div class="contact-us-route">
     <DefaultLayout>
-      <HeroSection />
-      <ContactForm @success="$bvModal.show('success-modal')" />
+      <PageLoader v-if="loading" />
+      <div v-else>
+        <HeroSection />
+        <ContactForm @success="$bvModal.show('success-modal')" />
+      </div>
     </DefaultLayout>
     <ToastConfirmationModal
       name="success-modal"
@@ -17,6 +20,16 @@ export default {
     HeroSection: () => import("@/components/modules/contact-us/HeroSection/index.vue"),
     ContactForm: () => import("@/components/modules/contact-us/ContactForm/index.vue"),
     ToastConfirmationModal: () => import("@/components/Shared/ToastConfirmationModal")
+  },
+  data() {
+    return {
+      loading: true
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false
+    }, 1500)
   }
 }
 </script>
