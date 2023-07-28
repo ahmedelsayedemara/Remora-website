@@ -2,9 +2,16 @@
   padding: 1.125rem 0;
   box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05) !important;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 992px) {
     // padding-bottom: 0;
+  }
+
+  &__container {
+    width: 79%;
   }
 
   &__logo {
@@ -52,11 +59,81 @@
         .navbar-collapse {
           justify-content: center;
 
+          // .navbar-nav {
+          //   .nav-item {
+          //     .nav-link {
+          //       font-size: 1.3rem;
+          //       font-weight: 400;
+          //       color: $color-text-primary;
+          //       line-height: 1.5rem;
+          //       text-transform: capitalize;
+
+          //       &:focus,
+          //       &:active {
+          //         outline: none;
+          //       }
+
+          //       &::after {
+          //         color: $color-text-secondary;
+          //         vertical-align: 0.55rem;
+          //         border-top: 0.2rem solid;
+          //         border-right: 0.2rem solid transparent;
+          //         border-left: 0.2rem solid transparent;
+          //       }
+
+          //       &:lang(en) {
+          //         margin: 0 0.3rem;
+          //       }
+          //     }
+
+          //     .dropdown-menu {
+          //       border: none;
+          //       min-width: 14rem;
+          //       box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05);
+          //       border-radius: 0.5rem;
+
+          //       li {
+          //         margin: 0.5rem;
+
+          //         .dropdown-item {
+          //           background: #ffffff;
+          //           border-radius: 0.24rem;
+          //           color: $color-text-primary;
+          //           font-size: 0.875rem;
+          //           line-height: 1.5rem;
+          //           font-weight: 400;
+
+          //           &:hover,
+          //           &:active {
+          //             font-weight: 600;
+          //             background: $color-secondary;
+          //             color: $color-primary !important;
+          //           }
+          //         }
+          //       }
+          //     }
+          //   }
+          // }
+
           .navbar-nav {
             .nav-item {
+              position: relative;
+              transition: all 0.3s ease-in-out;
+              &:hover {
+                &::after {
+                  position: absolute;
+                  content: "";
+                  width: 40px;
+                  height: 2px;
+                  background: $color-primary;
+                  bottom: -10%;
+                  right: 50%;
+                  transform: translate(50%);
+                }
+              }
               .nav-link {
                 font-size: 1.3rem;
-                font-weight: 400;
+                font-weight: 500;
                 color: $color-text-primary;
                 line-height: 1.5rem;
                 text-transform: capitalize;
@@ -77,32 +154,12 @@
                 &:lang(en) {
                   margin: 0 0.3rem;
                 }
-              }
 
-              .dropdown-menu {
-                border: none;
-                min-width: 14rem;
-                box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05);
-                border-radius: 0.5rem;
-
-                li {
-                  margin: 0.5rem;
-
-                  .dropdown-item {
-                    background: #ffffff;
-                    border-radius: 0.24rem;
-                    color: $color-text-primary;
-                    font-size: 0.875rem;
-                    line-height: 1.5rem;
-                    font-weight: 400;
-
-                    &:hover,
-                    &:active {
-                      font-weight: 600;
-                      background: $color-secondary;
-                      color: $color-primary !important;
-                    }
-                  }
+                &:hover,
+                &:active {
+                  font-weight: 500;
+                  // background: $color-secondary;
+                  color: $color-primary !important;
                 }
               }
             }
@@ -149,4 +206,19 @@
 
 .position-static {
   position: static;
+}
+
+.active {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 2px;
+    background: $color-primary;
+    bottom: -10%;
+    right: 50%;
+    transform: translate(50%);
+  }
 }

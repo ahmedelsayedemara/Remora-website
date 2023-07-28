@@ -86,7 +86,9 @@ export default {
   },
   methods: {
     onSubmit() {
-      this.$emit("success")
+      this.$emit("success");
+      this.formValues.email = ""
+      this.formValues.message = ""
     }
   }
 }

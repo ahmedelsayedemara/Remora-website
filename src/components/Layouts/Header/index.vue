@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <b-container>
+    <div class="header__container">
       <b-row>
         <b-col xl="3" lg="3" md="2" sm="2" cols="2" class="header__logo px-0 px-lg-3">
           <div class="header__logo-container cursor-pointer" @click="handleRoute('/')">
@@ -33,6 +33,7 @@
                     v-for="(item, idx) in menuItems"
                     :key="idx"
                     :text="item.value"
+                    :class="selectedPath == item.path && 'active'"
                     @click="handleRoute(item.path)"
                   >
                     {{ item.value }}
@@ -59,7 +60,7 @@
           <p class="fs-16 cursor-pointer" @click="changeLang">{{ getLangTitle }}</p>
         </b-col>
       </b-row>
-    </b-container>
+    </div>
   </div>
 </template>
 <script>
@@ -69,6 +70,7 @@ export default {
   components: { LogoSvg, LogoMobile },
   data() {
     return {
+      selectedPath: "",
       menuItems: [
         {
           value: this.$t("MENU.LEADERS"),
@@ -150,6 +152,17 @@ export default {
       return this.$i18n.locale === "ar" ? "English" : "عربي"
     }
   },
+  watch: {
+    $route(to, from) {
+      if (to.path !== from.path) {
+        this.selectedPath = to.path
+        window.scrollTo(0, top)
+      }
+    }
+  },
+  mounted() {
+    this.selectedPath = this.$route.path
+  },
   methods: {
     changeLang() {
       if (this.$i18n.locale == "en") {
@@ -160,6 +173,7 @@ export default {
       window.location = window.location.href
     },
     handleRoute(path) {
+      this.selectedPath = path
       if (path) this.$router.push(path)
       return
     }
