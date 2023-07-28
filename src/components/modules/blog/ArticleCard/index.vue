@@ -11,9 +11,9 @@
     >
       <template #header>
         <div class="article__tags">
-          <div v-for="tag in article.tags" :key="tag.id" class="article__tag">
+          <!-- <div v-for="tag in article.tags" :key="tag.id" class="article__tag">
             <span class="fs-12">{{ tag.name }}</span>
-          </div>
+          </div> -->
         </div>
       </template>
 

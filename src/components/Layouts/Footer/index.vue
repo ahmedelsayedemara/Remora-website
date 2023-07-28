@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <b-row class="footer__content">
-      <b-col lg="4">
+      <b-col lg="6">
         <div class="footer__logo-container">
           <router-link to="/">
             <img src="@/assets/images/logo/footer-logo.svg" />
@@ -26,7 +26,29 @@
           </a>
         </div>
       </b-col>
-      <b-col lg="8">
+      <b-col lg="6">
+        <b-row>
+          <b-col lg="3" md="6" class="footer__links special-links mb-2 mt-lg-0 mt-4">
+            <h6 class="fs-18" @click="redirectTo('/leaders')">{{ $t("MENU.LEADERS") }}</h6>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col lg="3" md="6" class="footer__links special-links mb-2 mt-lg-0 mt-4">
+            <h6 class="fs-18" @click="redirectTo('/blog')">{{ $t("MENU.BLOG") }}</h6>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col lg="3" md="6" class="footer__links special-links mb-2 mt-lg-0 mt-4">
+            <h6 class="fs-18" @click="redirectTo('/about')">{{ $t("MENU.ABOUT") }}</h6>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col lg="3" md="6" class="footer__links special-links mb-2 mt-lg-0 mt-4">
+            <h6 class="fs-18" @click="redirectTo('/contact-us')">{{ $t("MENU.CONTACT") }}</h6>
+          </b-col>
+        </b-row>
+      </b-col>
+      <!-- <b-col lg="8">
         <b-row>
           <b-col lg="3" md="6" class="footer__links mt-lg-0 mt-4">
             <h6 class="fs-18">{{ $t("MENU.PLATFORM") }}</h6>
@@ -62,7 +84,7 @@
             </div>
           </b-col>
         </b-row>
-      </b-col>
+      </b-col> -->
     </b-row>
     <div class="footer__copy-rights fs-14">
       {{ $t("FOOTER.COPY_RIGHTS") }}
@@ -77,6 +99,11 @@ export default {
   data() {
     return {
       getDateFormat
+    }
+  },
+  methods: {
+    redirectTo(path) {
+      this.$router.push(path)
     }
   }
 }

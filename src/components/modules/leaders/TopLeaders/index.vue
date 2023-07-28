@@ -6,7 +6,7 @@
         <div class="top-leaders__card">
           <b-table
             class="custom-table"
-            :items="leaders"
+            :items="leadersRandomList"
             :busy="loading"
             :fields="fields"
             responsive
@@ -71,56 +71,57 @@ export default {
       fields: [
         {
           key: "trader",
-          label: this.$t("Trader"),
+          label: this.$t("LEADERS.TRADER"),
           sortable: false
         },
         {
           key: "followers",
-          label: this.$t("Followers"),
+          label: this.$t("LEADERS.FOLLOWER"),
           sortable: true
         },
         {
           key: "roi",
-          label: this.$t("ROI"),
+          label: this.$t("LEADERS.ROI"),
           sortable: true
         },
         {
           key: "total_pnl",
-          label: this.$t("Total PNL"),
+          label: this.$t("LEADERS.TOTAL_PNL"),
           sortable: true
         },
         {
           key: "aum",
-          label: this.$t("AUM"),
+          label: this.$t("LEADERS.AUM"),
           sortable: true
         },
         {
           key: "isPerformanceUp",
-          label: this.$t("Performance 1W"),
+          label: this.$t("LEADERS.PERFORMANCE"),
           sortable: true
         }
       ],
+      leadersRandomList: [],
       leaders: [
         {
           id: 1,
-          trader: this.$t("LEADERS.TRADER_NAME"),
+          trader: this.$t("LEADERS.TRADER_NAME_ONE"),
           followers: "213",
-          roi: "23.06",
-          total_pnl: "1145.8",
-          aum: "$47589.13",
+          roi: "24.07",
+          total_pnl: "1665.5",
+          aum: "$46559.13",
           profile_img: require("@/assets/images/leaders-trader-one.svg"),
           active: this.$t("LEADERS.ACTIVE_FROM"),
-          isROIup: true,
-          isTotalPNLup: true,
-          isPerformanceUp: true
+          isROIup: false,
+          isTotalPNLup: false,
+          isPerformanceUp: false
         },
         {
           id: 1,
-          trader: this.$t("LEADERS.TRADER_NAME"),
-          followers: "213",
-          roi: "23.06",
-          total_pnl: "1145.8",
-          aum: "$47589.13",
+          trader: this.$t("LEADERS.TRADER_NAME_TWO"),
+          followers: "663",
+          roi: "15.09",
+          total_pnl: "1115.8",
+          aum: "$49099.13",
           profile_img: require("@/assets/images/leaders-trader-two.svg"),
           active: this.$t("LEADERS.ACTIVE_FROM"),
           isROIup: false,
@@ -129,11 +130,11 @@ export default {
         },
         {
           id: 1,
-          trader: this.$t("LEADERS.TRADER_NAME"),
-          followers: "213",
-          roi: "23.06",
-          total_pnl: "1145.8",
-          aum: "$47589.13",
+          trader: this.$t("LEADERS.TRADER_NAME_THREE"),
+          followers: "543",
+          roi: "54.06",
+          total_pnl: "1545.8",
+          aum: "$45389.13",
           profile_img: require("@/assets/images/leaders-trader-three.svg"),
           active: this.$t("LEADERS.ACTIVE_FROM"),
           isROIup: true,
@@ -142,11 +143,11 @@ export default {
         },
         {
           id: 1,
-          trader: this.$t("LEADERS.TRADER_NAME"),
-          followers: "213",
-          roi: "23.06",
-          total_pnl: "1145.8",
-          aum: "$47589.13",
+          trader: this.$t("LEADERS.TRADER_NAME_FOUR"),
+          followers: "783",
+          roi: "80.06",
+          total_pnl: "1995.8",
+          aum: "$87899.13",
           profile_img: require("@/assets/images/leaders-trader-four.svg"),
           active: this.$t("LEADERS.ACTIVE_FROM"),
           isROIup: true,
@@ -155,12 +156,25 @@ export default {
         },
         {
           id: 1,
-          trader: this.$t("LEADERS.TRADER_NAME"),
-          followers: "213",
-          roi: "23.06",
-          total_pnl: "1145.8",
-          aum: "$47589.13",
-          profile_img: require("@/assets/images/leaders-trader-five.svg"),
+          trader: this.$t("LEADERS.TRADER_NAME_FIVE"),
+          followers: "265",
+          roi: "12.06",
+          total_pnl: "1115.8",
+          aum: "$34389.13",
+          profile_img: require("@/assets/images/leaders-trader-five.jpg"),
+          active: this.$t("LEADERS.ACTIVE_FROM"),
+          isROIup: false,
+          isTotalPNLup: false,
+          isPerformanceUp: false
+        },
+        {
+          id: 1,
+          trader: this.$t("LEADERS.TRADER_NAME_SIX"),
+          followers: "290",
+          roi: "21.06",
+          total_pnl: "2045.8",
+          aum: "$47654.13",
+          profile_img: require("@/assets/images/leaders-trader-six.jpg"),
           active: this.$t("LEADERS.ACTIVE_FROM"),
           isROIup: true,
           isTotalPNLup: true,
@@ -168,18 +182,104 @@ export default {
         },
         {
           id: 1,
-          trader: this.$t("LEADERS.TRADER_NAME"),
-          followers: "213",
-          roi: "23.06",
-          total_pnl: "1145.8",
-          aum: "$47589.13",
-          profile_img: require("@/assets/images/leaders-trader-six.svg"),
+          trader: this.$t("LEADERS.TRADER_NAME_SEVEN"),
+          followers: "323",
+          roi: "40.06",
+          total_pnl: "1905.8",
+          aum: "$49999.13",
+          profile_img: require("@/assets/images/leaders-trader-seven.jpg"),
+          active: this.$t("LEADERS.ACTIVE_FROM"),
+          isROIup: true,
+          isTotalPNLup: true,
+          isPerformanceUp: true
+        },
+        {
+          id: 1,
+          trader: this.$t("LEADERS.TRADER_NAME_EIGHT"),
+          followers: "453",
+          roi: "11.06",
+          total_pnl: "1005.8",
+          aum: "$23089.13",
+          profile_img: require("@/assets/images/leaders-trader-eight.jpg"),
           active: this.$t("LEADERS.ACTIVE_FROM"),
           isROIup: false,
           isTotalPNLup: false,
           isPerformanceUp: false
+        },
+        {
+          id: 1,
+          trader: this.$t("LEADERS.TRADER_NAME_NINE"),
+          followers: "883",
+          roi: "50.06",
+          total_pnl: "2005.8",
+          aum: "$47789.13",
+          profile_img: require("@/assets/images/leaders-trader-nine.jpg"),
+          active: this.$t("LEADERS.ACTIVE_FROM"),
+          isROIup: true,
+          isTotalPNLup: true,
+          isPerformanceUp: true
+        },
+        {
+          id: 1,
+          trader: this.$t("LEADERS.TRADER_NAME_TEN"),
+          followers: "903",
+          roi: "100.06",
+          total_pnl: "3000.8",
+          aum: "$47589.13",
+          profile_img: require("@/assets/images/leaders-trader-ten.jpg"),
+          active: this.$t("LEADERS.ACTIVE_FROM"),
+          isROIup: true,
+          isTotalPNLup: true,
+          isPerformanceUp: true
+        },
+        {
+          id: 1,
+          trader: this.$t("LEADERS.TRADER_NAME_ELEVEN"),
+          followers: "298",
+          roi: "10.06",
+          total_pnl: "1145.8",
+          aum: "$47589.13",
+          profile_img: require("@/assets/images/leaders-trader-eleven.jpg"),
+          active: this.$t("LEADERS.ACTIVE_FROM"),
+          isROIup: false,
+          isTotalPNLup: false,
+          isPerformanceUp: false
+        },
+        {
+          id: 1,
+          trader: this.$t("LEADERS.TRADER_NAME_TWELVE"),
+          followers: "593",
+          roi: "101.06",
+          total_pnl: "4004.8",
+          aum: "$99939.13",
+          profile_img: require("@/assets/images/leaders-trader-twelve.jpg"),
+          active: this.$t("LEADERS.ACTIVE_FROM"),
+          isROIup: true,
+          isTotalPNLup: true,
+          isPerformanceUp: true
         }
       ]
+    }
+  },
+  mounted() {
+    this.getRandomItems(this.leaders, 6)
+  },
+  methods: {
+    getRandomItems(sourceArray, count) {
+      let array = [...sourceArray] // Create a copy of the source array
+      let result = []
+
+      for (let i = 0; i < count; i++) {
+        if (!array.length) {
+          break // Exit if there are no more items to choose from
+        }
+
+        let randomIndex = Math.floor(Math.random() * array.length)
+        let [item] = array.splice(randomIndex, 1) // Splice will remove the item from array and return it
+        result.push(item)
+      }
+
+      this.leadersRandomList = result
     }
   }
 }

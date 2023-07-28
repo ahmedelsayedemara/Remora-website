@@ -3,10 +3,8 @@
   color: $color-white;
   padding: 4.75rem 7.5rem 2.5rem;
   @media (max-width: 767px) {
-    padding: 1.75rem 1.5rem ;
-
+    padding: 1.75rem 1.5rem;
   }
-
 
   &__logo-container {
     width: 14.641rem;
@@ -86,5 +84,19 @@
     justify-content: center;
     align-items: center;
     font-weight: 700;
+  }
+}
+
+.special-links {
+  cursor: pointer;
+  h6 {
+    font-weight: 400 !important;
+  }
+  
+  &:hover {
+    h6 {
+      font-weight: 600 !important;
+
+    }
   }
 }
