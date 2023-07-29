@@ -575,7 +575,7 @@ export default {
   },
   methods: {
     getArticleDetails(articleId) {
-      this.$router.push(`/blog-details/${articleId}`)
+      this.$router.push(`/blog/blog-details/${articleId}`)
     }
   }
 }

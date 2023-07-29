@@ -10,7 +10,7 @@ const publicRoutes = [
     component: () => import("../views/application/blog/list/index.vue")
   },
   {
-    path: "/blog-details/:id",
+    path: "/blog/blog-details/:id",
     name: "blog-details",
     component: () => import("../views/application/blog/details/index.vue")
   },
