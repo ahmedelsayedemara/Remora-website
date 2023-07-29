@@ -17,6 +17,11 @@
       color: $color-white;
       text-align: center;
       width: 60.75rem;
+
+      @media (max-width: 768px) {
+        font-size: 1.8rem !important;
+        margin: 0 2rem;
+      }
     }
   }
 }
