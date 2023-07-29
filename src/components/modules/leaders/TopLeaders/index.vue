@@ -1,5 +1,5 @@
 <template>
-  <b-container-fluid>
+  <b-container fluid>
     <div class="top-leaders">
       <b-container>
         <h3 class="fs-48">{{ $t("LEADERS.REMORA_TOP_LEADERS") }}</h3>
@@ -54,7 +54,7 @@
         </div>
       </b-container>
     </div>
-  </b-container-fluid>
+  </b-container>
 </template>
 <script>
 import ImagePolygonWrapper from "@/components/Shared/ImagePolygonWrapper/index.vue"

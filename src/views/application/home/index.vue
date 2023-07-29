@@ -264,8 +264,8 @@ export default {
     }, 1500)
   },
   watch: {
-    "$route.query.section"() {
-      if (this.$route.query.section) {
+    loading() {
+      if (!this.loading && this.$route.query.section) {
         this.$nextTick(() => {
           this.scrollToSection()
         })
