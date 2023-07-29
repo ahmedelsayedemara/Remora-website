@@ -37,6 +37,10 @@
     background-color: $color-primary !important;
     border-color: $color-primary !important;
 
+    @media (max-width: 992px){
+      margin-bottom: 3rem;
+    }
+
     &:hover {
       background-color: $color-orange !important;
     border-color: $color-orange !important;

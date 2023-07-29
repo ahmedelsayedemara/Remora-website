@@ -22,7 +22,7 @@
           <!-- <Button custom-class="primary">{{ $("ABOUT.JOIN_REMORA") }}</Button> -->
         </b-col>
         <b-col cols="12" lg="4">
-          <img src="@/assets/images/about-follower-to-leader.svg" />
+          <img class="w-100" src="@/assets/images/about-follower-to-leader.svg" />
         </b-col>
       </b-row>
     </b-container>

@@ -1,7 +1,7 @@
 <template>
   <div class="team">
   <h3 class="fs-32">{{ $t("ABOUT.MEET_TEAM") }}</h3>
-  <p class="fs-20">{{ $t("ABOUT.MEET_TEAM_SUBTITLE") }}</p>
+  <p class="fs-20 mx-1 text-center">{{ $t("ABOUT.MEET_TEAM_SUBTITLE") }}</p>
   <div class="team__members">
     <div class="team__card">
       <img src="@/assets/images/talal.svg" />

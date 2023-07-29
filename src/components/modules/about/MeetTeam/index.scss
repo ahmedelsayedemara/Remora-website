@@ -32,6 +32,15 @@
     border-radius: 1rem;
     text-align: center;
 
+    @media (max-width: 768px){
+      width: 150px;
+      img {
+
+        width: 100px;
+      }
+      
+    }
+
     &:hover {
       box-shadow: 12px 12px 80px -12px rgba(0, 0, 0, 0.10);
 
@@ -43,6 +52,10 @@
       line-height: 2rem;
       margin-bottom: 0;
       color: $color-text-primary;
+
+      @media (max-width: 768px){
+        font-size: 1.2rem !important;
+      }
     }
 
     p {
@@ -50,6 +63,10 @@
       line-height: 1.375rem;
       font-weight: 400;
       color: $color-text-primary;
+
+      @media (max-width: 768px){
+        font-size: 0.8rem !important;
+      }
     }
   }
 }

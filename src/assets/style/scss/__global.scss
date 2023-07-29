@@ -1,8 +1,8 @@
 html {
-  @media screen and (max-width: 1200px) {
+  @media (max-width: 1200px) {
     font-size: 14px !important;
   }
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 12px !important;
   }
 }
