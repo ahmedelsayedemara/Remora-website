@@ -73,6 +73,10 @@ export default {
       selectedPath: "",
       menuItems: [
         {
+          value: this.$t("MENU.HOME"),
+          path: "/"
+        },
+        {
           value: this.$t("MENU.LEADERS"),
           path: "/leaders"
           // subItems: [

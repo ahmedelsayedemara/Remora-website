@@ -91,12 +91,14 @@
   cursor: pointer;
   h6 {
     font-weight: 400 !important;
+    transition: 0.2s ease-in-out;
   }
   
   &:hover {
     h6 {
-      font-weight: 600 !important;
-
+      // font-weight: 600 !important;
+      color: $color-orange;
+      margin-inline-start: 2px;
     }
   }
 }
