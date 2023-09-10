@@ -1,6 +1,6 @@
 {
   "MENU": {
-    "HOME":"Home",
+    "HOME": "Home",
     "PLATFORM": "Platform",
     "OVERVIEW": "Overview",
     "LEADERS": "Leaders",
@@ -189,7 +189,8 @@
   "GLOBAL": {
     "NO_MATCHING": "No Data",
     "SHOW_MORE": "Show more",
-    "HOME": "Home"
+    "HOME": "Home",
+    "VALID_PHONE": "Please enter a valid phone number"
   },
   "FOOTER": {
     "REMORA_LOCATION": "7742 King Abdulaziz Rd, Al Aarid, Riyadh 13337",

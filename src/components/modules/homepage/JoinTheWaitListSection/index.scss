@@ -60,47 +60,47 @@
   }
 }
 
-::v-deep .vue-tel-input {
-  min-height: 44px;
-  border-radius: 6px;
-  border-color: $color-input-border;
-  padding: 1px;
+// ::v-deep .vue-tel-input {
+//   min-height: 44px;
+//   border-radius: 6px;
+//   border-color: $color-input-border;
+//   padding: 1px;
 
-  &:focus-within {
-    box-shadow: none;
-    border-color: $color-primary;
-  }
+//   &:focus-within {
+//     box-shadow: none;
+//     border-color: $color-primary;
+//   }
 
-  .vti__dropdown {
-    padding: 5px 0;
-    background-color: $color-white;
+//   .vti__dropdown {
+//     padding: 5px 0;
+//     background-color: $color-white;
 
-    .vti__selection {
-      background-color: $color-white;
-      border-inline-end: 1px solid $color-input-border;
-    }
+//     .vti__selection {
+//       background-color: $color-white;
+//       border-inline-end: 1px solid $color-input-border;
+//     }
 
-    .vti__dropdown-list {
-      width: 15rem;
-      z-index: 9999;
-      top: 44px;
+//     .vti__dropdown-list {
+//       width: 15rem;
+//       z-index: 9999;
+//       top: 44px;
 
-      li {
-        font-size: 0.75rem;
-        font-weight: 400;
-        color: $color-text-primary;
-        padding: 5px 3px;
-        vertical-align: middle;
-      }
+//       li {
+//         font-size: 0.75rem;
+//         font-weight: 400;
+//         color: $color-text-primary;
+//         padding: 5px 3px;
+//         vertical-align: middle;
+//       }
 
-      &:lang(ar) {
-        left: auto;
-        right: 0;
-        text-align: right;
-      }
-    }
-  }
-}
+//       &:lang(ar) {
+//         left: auto;
+//         right: 0;
+//         text-align: right;
+//       }
+//     }
+//   }
+// }
 
 @media screen and (max-width: 767px) {
   .w-75 {

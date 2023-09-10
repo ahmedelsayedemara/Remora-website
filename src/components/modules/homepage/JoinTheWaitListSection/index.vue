@@ -9,29 +9,21 @@
     <b-container fluid>
       <b-row class="justify-content-center">
         <b-col cols="12" xl="4">
-          <FormValidation @handleSubmit="onSubmit">
-            <b-form>
+          <ValidationObserver ref="observer" v-slot="{ handleSubmit }">
+            <b-form @submit.prevent="handleSubmit(onSubmit)">
               <div v-for="(input, index) in data.inputs" :key="index" class="mb-3">
                 <div v-if="input.type === 'phone-number'">
-                  <label for="" class="fs-12 fw-400">{{ input.label }}</label>
-                  <vue-tel-input
-                    autoDefaultCountry
-                    :dropdownOptions="dropdownOptions"
-                    v-model="phone"
-                  >
-                    <template #arrow-icon>
-                      <b-icon-chevron-down class="mx-2"></b-icon-chevron-down>
-                    </template>
-                  </vue-tel-input>
+                  <label class="fs-12 fw-400">{{ input.label }}</label>
+                  <PhoneField rules="required" v-model="form.phone" :name="input.label" />
                 </div>
                 <div v-else-if="input.type === 'checkbox'" class="d-flex align-items-center">
-                  <CheckboxField v-model="joinAsLeader" />
+                  <CheckboxField v-model="form.joinAsLeader" />
                   <label class="checkbox-label fs-16 fw-400 mb-0">{{ input.label }}</label>
                 </div>
                 <div v-else>
-                  <label for="" class="fs-12 fw-400">{{ input.label }}</label>
+                  <label class="fs-12 fw-400">{{ input.label }}</label>
                   <TextField
-                    v-model="email"
+                    v-model="form.email"
                     rules="required|email"
                     :name="input.label"
                     :type="input.type"
@@ -41,12 +33,12 @@
                 </div>
               </div>
               <div class="btn-container">
-                <Button customClass="w-100" type="submit" class="w-100 mt-4">{{
+                <Button customClass="w-100" type="submit" class="w-100 mt-4" :loading="loading">{{
                   data.btnText
                 }}</Button>
               </div>
             </b-form>
-          </FormValidation>
+          </ValidationObserver>
         </b-col>
       </b-row>
     </b-container>
@@ -65,6 +57,14 @@ export default {
         btnText: "",
         inputs: [{}]
       })
+    },
+    loading: {
+      type: Boolean,
+      default: false
+    },
+    resetForm: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -73,17 +73,32 @@ export default {
         showDialCodeInSelection: true,
         showFlags: true
       },
-      phone: "",
-      joinAsLeader: "",
-      email: ""
+      form: {
+        phone: "",
+        joinAsLeader: "",
+        email: ""
+      }
+    }
+  },
+  watch: {
+    resetForm: {
+      immediate: true,
+      handler(val) {
+        if (val) this.handleResetForm()
+      }
     }
   },
   methods: {
     onSubmit() {
-      this.$emit("success")
-      this.email = ""
-      this.phone = ""
-      this.joinAsLeader = ""
+      this.$emit("handleContactUs", this.form)
+    },
+    handleResetForm() {
+      this.$refs.observer.reset()
+      this.form = {
+        phone: "",
+        joinAsLeader: "",
+        email: ""
+      }
     }
   }
 }

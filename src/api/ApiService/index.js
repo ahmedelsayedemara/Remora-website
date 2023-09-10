@@ -3,7 +3,7 @@ import qs from "qs"
 import store from "@/store"
 import VueCookies from "vue-cookies"
 import i18n from "@/plugins/i18n.js"
-axios.defaults.baseURL = process.env.VUE_APP_BASE_URL
+axios.defaults.baseURL = process.env.VUE_APP_ROOT_API;
 
 export default function ApiService({ method, url, config = {} }) {
   return axios({

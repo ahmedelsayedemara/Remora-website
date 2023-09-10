@@ -9,8 +9,10 @@
           :is="section.component"
           :id="section.component"
           :data="section.data"
-          @success="$bvModal.show('success-modal')"
+          :loading="contactLoading"
+          @handleContactUs="handleContactUs"
           @scrollToJoinNow="scrollToSection"
+          :resetForm="resetForm"
         ></component>
       </div>
     </DefaultLayout>
@@ -33,6 +35,7 @@ import OurPartnersSection from "@/components/modules/homepage/OurPartnersSection
 import JoinTheWaitListSection from "@/components/modules/homepage/JoinTheWaitListSection"
 import SharkSection from "@/components/modules/homepage/SharkSection"
 import ToastConfirmationModal from "@/components/Shared/ToastConfirmationModal"
+import { postContactUsRequest } from "@/api/contactUs"
 export default {
   name: "HomeComponent",
   components: {
@@ -50,6 +53,8 @@ export default {
   data() {
     return {
       loading: true,
+      contactLoading: false,
+      resetForm: false,
       sections: [
         {
           id: 1,
@@ -273,6 +278,22 @@ export default {
     }
   },
   methods: {
+    handleContactUs(data) {
+      const params = {
+        mobile: data.phone,
+        email: data.email,
+        type: "join_us"
+      }
+      this.contactLoading = true
+      this.ApiService(postContactUsRequest(params))
+        .then(() => {
+          this.$bvModal.show("success-modal")
+          this.resetForm = true
+        })
+        .finally(() => {
+          this.contactLoading = false
+        })
+    },
     scrollToSection() {
       const element = document.getElementById("JoinTheWaitListSection")
       element.scrollIntoView({ behavior: "smooth", block: "center" })

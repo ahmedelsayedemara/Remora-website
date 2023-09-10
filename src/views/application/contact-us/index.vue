@@ -4,7 +4,7 @@
       <PageLoader v-if="loading" />
       <div v-else>
         <HeroSection />
-        <ContactForm @success="$bvModal.show('success-modal')" />
+        <ContactForm :loading="contactLoading" @handleContactUs="handleContactUs" ref="contactUs" />
       </div>
     </DefaultLayout>
     <ToastConfirmationModal
@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import { postContactUsRequest } from "@/api/contactUs"
+
 export default {
   components: {
     HeroSection: () => import("@/components/modules/contact-us/HeroSection/index.vue"),
@@ -23,13 +25,33 @@ export default {
   },
   data() {
     return {
-      loading: true
+      loading: true,
+      contactLoading: false,
+      resetForm: false
     }
   },
   mounted() {
     setTimeout(() => {
       this.loading = false
     }, 1500)
+  },
+  methods: {
+    handleContactUs(data) {
+      const params = {
+        body: data.body,
+        email: data.email,
+        type: "request"
+      }
+      this.contactLoading = true
+      this.ApiService(postContactUsRequest(params))
+        .then(() => {
+          this.$bvModal.show("success-modal")
+          this.$refs.contactUs.handleResetForm()
+        })
+        .finally(() => {
+          this.contactLoading = false
+        })
+    }
   }
 }
 </script>

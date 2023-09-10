@@ -7,8 +7,8 @@
             <h3 class="fs-32">{{ $t("CONTACT_US.CONTACT_FORM.TITLE") }}</h3>
           </b-col>
         </b-row>
-        <FormValidation @handleSubmit="onSubmit">
-          <b-form>
+        <ValidationObserver ref="observer" v-slot="{ handleSubmit }">
+          <b-form @submit.prevent="handleSubmit(onSubmit)">
             <!-- <b-row class="mb-4">
             <b-col>
               <SelectSearch
@@ -45,7 +45,7 @@
                   no-resize
                   rows="8"
                   id="message"
-                  v-model="formValues.message"
+                  v-model="formValues.body"
                   :placeholder="$t('CONTACT_US.CONTACT_FORM.MESSAGE_PLACEHOLDER')"
                   :name="$t('CONTACT_US.CONTACT_FORM.MESSAGE')"
                   rules="required"
@@ -61,13 +61,17 @@
             </b-row>
             <b-row>
               <b-col class="d-flex justify-content-end">
-                <Button variant="secondary" customClass="btn-secondary" type="submit">{{
-                  $t("CONTACT_US.CONTACT_FORM.BTN")
-                }}</Button>
+                <Button
+                  variant="secondary"
+                  customClass="btn-secondary"
+                  type="submit"
+                  :loading="loading"
+                  >{{ $t("CONTACT_US.CONTACT_FORM.BTN") }}</Button
+                >
               </b-col>
             </b-row>
           </b-form>
-        </FormValidation>
+        </ValidationObserver>
       </b-col>
     </b-row>
   </b-container>
@@ -75,20 +79,32 @@
 
 <script>
 export default {
+  props: {
+    loading: {
+      type: Boolean,
+      default: false
+    }
+  },
+
   data() {
     return {
       formValues: {
         // category: "",
         email: "",
-        message: ""
+        body: ""
       }
     }
   },
   methods: {
     onSubmit() {
-      this.$emit("success");
-      this.formValues.email = ""
-      this.formValues.message = ""
+      this.$emit("handleContactUs", this.formValues)
+    },
+    handleResetForm() {
+      this.$refs.observer.reset()
+      this.formValues = {
+        email: "",
+        body: ""
+      }
     }
   }
 }

@@ -8,6 +8,7 @@ import CheckboxField from "@/components/Shared/Forms/CheckboxField/index.vue"
 import RadioButton from "@/components/Shared/Forms/RadioButton/index.vue"
 import DateTimePicker from "@/components/Shared/Forms/DateTimePicker/index.vue"
 import Button from "@/components/Shared/Forms/Button/index.vue"
+import PhoneField from "@/components/Shared/Forms/PhoneField";
 import Toast from "@/components/Shared/Toast/index.vue"
 import FormValidation from "@/components/Shared/FormValidation/index.vue"
 import DefaultLayout from "@/layouts/DefaultLayout/index.vue"
@@ -25,6 +26,7 @@ const components = {
   RadioButton,
   DateTimePicker,
   Button,
+  PhoneField,
   Toast,
   FormValidation,
   DefaultLayout,
